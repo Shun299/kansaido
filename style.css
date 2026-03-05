@@ -239,6 +239,24 @@ section h2 {
     color: var(--bg-color);
 }
 
+#recommend {
+    position: relative;
+}
+
+.clouds {
+    position: absolute;
+}
+
+.clouds.right1 {
+    top: 130px;
+    right: -250px;
+}
+
+.clouds.left2 {
+    bottom: -30px;
+    left: -100px;
+}
+
 #recommend h2 {
     text-align: center;
 }
