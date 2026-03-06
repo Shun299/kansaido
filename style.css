@@ -253,6 +253,10 @@ section h2 {
     overflow-x: clip;
 }
 
+#recommend h2 {
+    margin-bottom: 5rem;
+}
+
 .clouds {
     position: absolute;
 }
