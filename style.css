@@ -159,7 +159,7 @@ section {
 }
 
 section h2 {
-    margin-bottom: 5rem;
+    margin-bottom: 4rem;
     letter-spacing: .5rem;
 }
 
@@ -177,21 +177,30 @@ section h2 {
 
 #news-list {
     margin-bottom: 5rem;
+    width: 100%;
+    padding: 0 10rem;
 }
 
 #news-list ul {
     list-style: none;
     font-size: 1.5rem;
     letter-spacing: .1rem;
+    text-align: left;
 }
 
 #news-list ul li {
-    padding: 15px 40px 15px 30px;
+    padding: 15px 30px 15px 30px;
     border-bottom: solid 1.5px var(--text-color);
 }
 
-#news-list ul:first-child {
-    border-top: solid 1.5px var(--text-color);
+#news-list ul li:first-child {
+    text-align: center;
+}
+
+#news-list ul:first-child span {
+    color: #A25A47;
+    font-family: var(--font-jp-M);
+    font-size: 2rem;
 }
 
 .detail-box {
@@ -241,6 +250,7 @@ section h2 {
 
 #recommend {
     position: relative;
+    overflow-x: clip;
 }
 
 .clouds {
@@ -248,7 +258,7 @@ section h2 {
 }
 
 .clouds.right1 {
-    top: 130px;
+    top: 140px;
     right: -250px;
 }
 
@@ -259,6 +269,7 @@ section h2 {
 
 #recommend h2 {
     text-align: center;
+
 }
 
 #reco-container {
@@ -267,11 +278,14 @@ section h2 {
     justify-items: center;
 }
 
+.reco-card {
+    width: 21.875rem;
+}
+
 .reco-card img {
     width: 21.875rem;
     height: 21.875rem;
     object-fit: cover;
-    margin-bottom: .625rem;
 }
 
 .category {
@@ -286,11 +300,11 @@ section h2 {
     letter-spacing: 2px;
     font-family: var(--font-jp-M);
     border-radius: 2px;
-    margin-bottom: .625rem;
+    margin: .625rem 0;
 }
 
-.reco-card h3 {
-    font-family: var(--font-h3);
+h3 {
+    font-family: var(--font-headline);
     font-weight: normal;
     font-size: 1.5rem;
     margin-bottom: .625rem;
@@ -298,6 +312,7 @@ section h2 {
 
 .reco-exp {
     font-family: var(--font-jp-M);
+    line-height: 2;
 }
 
 .price {
@@ -305,7 +320,18 @@ section h2 {
     font-family: var(--font-jp-M);
     letter-spacing: 2px;
     font-size: 20px;
+    background-image: url(./imgs/price-underline.svg);
+    background-repeat: no-repeat;
+    background-position: 0 100%;
+    background-size: 100%;
+    /* transition: background-size .3s ease; */
+    padding-bottom: 4px;
+    width: fit-content;
 }
+
+/* .price:hover {
+    background-size: 100%;
+} */
 
 .price span:nth-child(1) {
     font-size: 16px;
@@ -313,6 +339,10 @@ section h2 {
 
 .price span:nth-child(2) {
     font-size: 16px;
+}
+
+.harugasumi {
+    font-size: 18px;
 }
 
 #gift {
@@ -325,11 +355,11 @@ section h2 {
 }
 
 #message {
+    font-family: var(--font-headline);
     text-align: center;
     margin-bottom: 3rem;
     letter-spacing: 4px;
-    font-size: 18px;
-    font-family: serif;
+    font-size: 1.25rem;
 }
 
 #gift h3 {
@@ -411,7 +441,7 @@ section h2 {
 
 #thought > img {
     width: 30rem;
-    height: 37.5rem;
+    height: 35rem;
     object-fit: cover;
 }
 
@@ -426,7 +456,7 @@ section h2 {
 #thought-sentence ::before {
     content: "";
     position: absolute;
-    top: 130px; left: 0; right: 0; bottom: 0;
+    top: 100px; left: 0; right: 0; bottom: 0;
     background-image: url(./imgs/kansaido_icon_main_mojinashi.svg);
     background-size: contain;
     background-repeat: no-repeat;
@@ -450,5 +480,35 @@ section h2 {
     flex-direction: column;
     gap: 25px;
     letter-spacing: 1px;
-    line-height: 2.5;
+    line-height: 2;
+}
+
+.product-card {
+    width: 300px;
+}
+
+.product-card img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+}
+
+#product {
+    padding: 6.25rem 3.25rem;
+}
+
+#product h2 {
+    text-align: center;
+}
+
+#product-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    justify-items: center;
+    row-gap: 4rem;
+}
+
+#product .detail-box {
+    margin-top: 4rem;
 }
