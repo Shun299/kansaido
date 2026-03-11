@@ -149,10 +149,39 @@ header nav a {
     border-bottom: none;
 }
 
+#first-view {
+    position: relative;
+}
+
 #first-view img{
     width: 100%;
     margin-top: 4.375rem;
 }
+
+#catch-copy {
+    position: absolute;
+    top: 30%;
+    right: 5%;
+    display: flex;
+    gap: 24px;
+}
+
+#catch-copy span{
+    writing-mode: vertical-rl;
+    font-family: var(--font-headline);
+    font-size: 32px;
+    background-color: var(--bg-color);
+    height: fit-content;
+    letter-spacing: 16px;
+    padding: 20px;
+    text-shadow: 3px 3px 5px rgba(43,43,43,0.5);
+    white-space: nowrap;
+}
+
+#catch-copy span:nth-child(1) {
+    margin-top: 5rem;
+}
+
 
 section {
     padding: 6.25rem 1.25rem;
@@ -547,4 +576,8 @@ section h2 {
 
 #product .detail-box {
     margin-top: 4rem;
+}
+
+#shop h2 {
+    text-align: center;
 }
