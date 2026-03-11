@@ -33,7 +33,7 @@
     --bg-color: #f5f1e8;
     --text-color: #2b2b2b;
     --accent-green: #209f4b;
-    --accent-lightgreen: #41c56f;
+    --accent-lightgreen: #48D97A;
     --accent-brown: #c57763;
     --font-headline: 'New Tegomin', serif;
     --font-jp: 'Higure Gothic R', serif;
@@ -80,7 +80,8 @@ header nav a {
     text-decoration: none;
     position: relative;
     z-index: 10;
-    border-bottom: solid 1.5px var(--text-color);
+    border-bottom: 2px solid transparent;
+    border-image: url(./imgs/price-underline.svg) 0 0 100% 0 stretch;
     padding-bottom: .25rem;
     color: var(--text-color);
     transition: .3s;
@@ -313,6 +314,7 @@ section h2 {
     font-weight: normal;
     font-size: 1.5rem;
     margin-bottom: .625rem;
+    letter-spacing: 2px;
     width: fit-content;
     padding-bottom: 3px;
     border-bottom: 2px solid transparent;
@@ -322,10 +324,11 @@ section h2 {
 .reco-exp {
     font-family: var(--font-jp-M);
     line-height: 2;
+    letter-spacing: 1px;
 }
 
 .price {
-    margin: .625rem 0;
+    margin-top: .625rem;
     font-family: var(--font-jp-M);
     letter-spacing: 2px;
     font-size: 20px;
@@ -336,7 +339,42 @@ section h2 {
 }
 
 .price span:nth-child(2) {
-    font-size: 16px;
+    font-size: 12px;
+}
+
+.cart-input {
+    font-family: var(--font-jp-M);
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    margin: .9375rem 0;
+}
+
+.cart-input input {
+    width: 50px;
+    height: 30px;
+    border: solid 1.5px var(--text-color);
+    padding-left: 10px;
+}
+
+.cart-input button {
+    cursor: pointer;
+    width: 8.75rem;
+    height: 3rem;
+    background-color: var(--accent-lightgreen);
+    border-radius: 5px;
+    font-size: 20px;
+    letter-spacing: 2px;
+    font-family: var(--font-jp-M);
+    border: solid 2px #006A25; 
+    margin-left: 30px;
+    box-shadow: 0px 3px 0px 0px #006A25;
+    text-align: center;
+}
+
+.cart-input button:active {
+    transform: translateY(3px);
+    box-shadow: none;
 }
 
 .harugasumi {
@@ -504,7 +542,7 @@ section h2 {
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: auto;
     justify-items: center;
-    row-gap: 4rem;
+    row-gap: 3rem;
 }
 
 #product .detail-box {
