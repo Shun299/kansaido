@@ -563,6 +563,31 @@ section h2 {
     gap: 50px;
 }
 
+.cam-banner img {
+    box-shadow: 0px 5px 4px rgba(43,43,43,0.3);
+    border-radius: 3px;
+    width: 500px;
+    height: 200px;
+}
+
+.cam-banner a {
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+.cam-banner p {
+    text-align: center;
+    margin-top: 1rem;
+    font-size: 20px;
+    font-family: var(--font-headline);
+}
+
+.cam-banner p span {
+    border-bottom: 1.5px dashed var(--accent-green);
+    font-size: 24px;
+    color: var(--accent-green);
+}
+
 .product-card {
     width: 300px;
 }
@@ -593,6 +618,42 @@ section h2 {
     margin-top: 4rem;
 }
 
+#shop {
+    position: relative;
+}
+
 #shop h2 {
     text-align: center;
+}
+
+#shop-contents img{
+    object-fit: contain;
+    height: 650px;
+    width: 100%;
+}
+
+#shop-detail {
+    position: absolute;
+    background-color: #fff;
+    top: 30%;
+    left: 5%;
+    font-family: var(--font-jp-M);
+    color: var(--text-color);
+    font-size: 18px;
+    padding: 40px;
+    letter-spacing: 1px;
+    line-height: 1.6;
+    box-shadow: 0px 4px 4px rgba(43,43,43,0.5);
+}
+
+#shop-detail #title {
+    font-size: 38px;
+}
+
+#shop-detail #time {
+    margin: 20px 0;
+}
+
+#shop-detail #address {
+    font-size: 16px;
 }
