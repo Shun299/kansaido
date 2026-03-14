@@ -160,26 +160,28 @@ header nav a {
 
 #catch-copy {
     position: absolute;
-    top: 30%;
-    right: 5%;
+    top: 25%;
+    right: 8%;
     display: flex;
-    gap: 24px;
+    gap: 2rem;
 }
 
 #catch-copy span{
     writing-mode: vertical-rl;
     font-family: var(--font-headline);
-    font-size: 32px;
-    background-color: var(--bg-color);
+    color: var(--bg-color);
+    font-size: 2rem;
     height: fit-content;
-    letter-spacing: 16px;
-    padding: 20px;
-    text-shadow: 3px 3px 5px rgba(43,43,43,0.5);
+    letter-spacing: 1rem;
+    text-shadow:
+    0px 0px 5px rgb(0, 0, 0),
+    0px 0px 5px rgb(0, 0, 0),
+    0px 0px 5px rgb(0, 0, 0);
     white-space: nowrap;
 }
 
 #catch-copy span:nth-child(1) {
-    margin-top: 5rem;
+    margin-top: 6.5rem;
 }
 
 
@@ -289,16 +291,17 @@ section h2 {
 
 .clouds {
     position: absolute;
+    width: 24rem;
 }
 
 .clouds.right1 {
-    top: 140px;
-    right: -250px;
+    top: 16%;
+    right: -10%;
 }
 
 .clouds.left2 {
-    bottom: -30px;
-    left: -100px;
+    bottom: 0%;
+    left: -10%;
 }
 
 #recommend h2 {
@@ -399,11 +402,15 @@ section h2 {
     border: none;
     border-radius: 3px;
     text-align: center;
-    transition: .3s;
+    transition: box-shadow 0.2s ease-out, transform 0.15s ease-out;
 }
 
 .cart-input button:hover {
     box-shadow: 0px 0px 7px rgba(43,43,43,0.8);
+}
+
+.cart-input button:active {
+    transform: scale(95%);
 }
 
 .harugasumi {
@@ -514,14 +521,14 @@ section h2 {
     position: relative;
     display: grid;
     grid-template-rows: auto auto auto;
-    padding-bottom: 50px;
+    padding-bottom: 3.125rem;
     gap: 3.75rem;
 }
 
 #thought-sentence ::before {
     content: "";
     position: absolute;
-    top: 100px; left: 0; right: 0; bottom: 0;
+    top: 6.25rem; left: 0; right: 0; bottom: 0;
     background-image: url(./imgs/kansaido_icon_main_mojinashi.svg);
     background-size: contain;
     background-repeat: no-repeat;
@@ -543,7 +550,7 @@ section h2 {
     font-family: var(--font-jp-M);
     display: grid;
     flex-direction: column;
-    gap: 25px;
+    gap: 1.5625rem;
     letter-spacing: 1px;
     line-height: 2;
 }
@@ -560,14 +567,14 @@ section h2 {
     display: grid;
     grid-template-columns: 1fr 1fr;
     justify-items: center;
-    gap: 50px;
+    gap: 3.125rem;
 }
 
 .cam-banner img {
     box-shadow: 0px 5px 4px rgba(43,43,43,0.3);
     border-radius: 3px;
-    width: 500px;
-    height: 200px;
+    width: 31.25rem;
+    height: 12.5rem;
 }
 
 .cam-banner a {
@@ -578,23 +585,23 @@ section h2 {
 .cam-banner p {
     text-align: center;
     margin-top: 1rem;
-    font-size: 20px;
+    font-size: 1.25rem;
     font-family: var(--font-headline);
 }
 
 .cam-banner p span {
     border-bottom: 1.5px dashed var(--accent-green);
-    font-size: 24px;
+    font-size: 1.5rem;
     color: var(--accent-green);
 }
 
 .product-card {
-    width: 300px;
+    width: 18.75rem;
 }
 
 .product-card img {
-    width: 300px;
-    height: 300px;
+    width: 18.75rem;
+    height: 18.75rem;
     object-fit: cover;
 }
 
@@ -620,6 +627,7 @@ section h2 {
 
 #shop {
     position: relative;
+    padding: 9.25rem;
 }
 
 #shop h2 {
@@ -628,8 +636,24 @@ section h2 {
 
 #shop-contents img{
     object-fit: contain;
-    height: 650px;
-    width: 100%;
+    height: 40.625rem;
+    width: auto;
+}
+
+#shop-deco img{
+    position: absolute;
+    z-index: 1;
+    width: 320px;
+}
+
+#shop-deco img:first-child {
+    top: 28%;
+    left: -6%;
+}
+
+#shop-deco img:last-child {
+    top: 55%;
+    left: 19%;
 }
 
 #shop-detail {
@@ -639,21 +663,101 @@ section h2 {
     left: 5%;
     font-family: var(--font-jp-M);
     color: var(--text-color);
-    font-size: 18px;
-    padding: 40px;
+    font-size: 1.125rem;
+    padding: 2.5rem;
     letter-spacing: 1px;
     line-height: 1.6;
     box-shadow: 0px 4px 4px rgba(43,43,43,0.5);
 }
 
 #shop-detail #title {
-    font-size: 38px;
+    font-size: 2.375rem;
 }
 
 #shop-detail #time {
-    margin: 20px 0;
+    margin: 1.25rem 0;
 }
 
 #shop-detail #address {
-    font-size: 16px;
+    font-size: 1rem;
+}
+
+footer {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+        "imgs-contents footer-nav"
+        "footer-shop-info small"
+    ;
+    width: 100%;
+    height: 25rem;
+    background-color: var(--accent-green);
+}
+
+#imgs-contents {
+    grid-area: imgs-contents;
+    width: fit-content;
+    padding: 1.875rem 3.125rem;
+}
+
+footer img {
+    width: 15.625rem;
+}
+
+footer #icons {
+    display: flex;
+    width: 15.625rem;
+    justify-content: space-evenly;
+}
+
+footer #icons img{
+    width: 3.125rem;
+    height: 3.125rem;
+}
+
+#footer-shop-info , #footer-nav {
+    color: var(--bg-color);
+    font-family: var(--font-jp-M);
+    line-height: 1.8;
+    letter-spacing: 1px;
+}
+
+footer #footer-shop-info {
+    grid-area: footer-shop-info;
+    padding-left: 3.125rem;
+    width: fit-content;
+}
+
+footer #footer-nav {
+    grid-area: footer-nav;
+    padding-top: 2rem;
+}
+
+footer #footer-nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4rem;
+}
+
+footer #footer-nav ul li a{
+    text-decoration: none;
+    color: inherit;
+}
+
+footer #footer-nav ul li a:hover{
+  text-decoration: underline;
+}
+
+#footer-small {
+    display: grid;
+    grid-area: small;
+    justify-content: end;
+    align-items: end;
+    color: var(--bg-color);
+    font-family: var(--font-jp-M);
+}
+
+small {
+    margin: 0 3.125rem 3.125rem 0;
 }
