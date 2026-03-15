@@ -57,13 +57,14 @@ header {
     width: 100%;
     background-color: var(--bg-color);
     align-items: center;
+    justify-content: space-evenly;
 }
 
 header #header-logo img {
     position: relative;
     z-index: 10;
     height: 4.375rem;
-    margin: 0 2.5rem;
+    margin: 0 1.5rem;
 }
 
 header #nav-container {
@@ -215,7 +216,7 @@ section h2 {
 
 #news-list ul {
     list-style: none;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     letter-spacing: .1rem;
     text-align: left;
 }
@@ -229,10 +230,33 @@ section h2 {
     border-top: solid 1.5px var(--text-color);
 }
 
-#news-list ul:first-child span {
-    color: #A25A47;
-    font-family: var(--font-jp-M);
-    font-size: 2rem;
+#news-list ul li summary {
+    cursor: pointer;
+}
+
+summary {
+    list-style: none;
+}
+
+summary::before {
+    content: "＋";
+    margin-right: .7rem;
+}
+
+details[open] summary::before {
+    content: "ー";
+}
+
+.news-details {
+    font-family: var(--font-headline);
+    font-size: 1.1rem;
+    line-height: 2;
+    letter-spacing: 1px;
+    margin: 2.5rem;
+}
+
+.news-details p {
+    margin: 1rem 0;
 }
 
 .detail-box {
@@ -331,7 +355,7 @@ section h2 {
 }
 
 .category span{
-    font-size: 14px;
+    font-size: .9rem;
     padding: .3125rem .625rem;
     background-color: var(--accent-lightgreen);
     letter-spacing: 2px;
@@ -345,7 +369,7 @@ section h2 {
     font-family: var(--font-headline);
     font-weight: normal;
     font-size: 1.5rem;
-    margin-bottom: .625rem;
+    margin-bottom: 1rem;
     letter-spacing: 2px;
     width: fit-content;
     padding-bottom: 3px;
@@ -357,6 +381,8 @@ section h2 {
     font-family: var(--font-jp-M);
     line-height: 2;
     letter-spacing: 1px;
+    font-size: .9rem;
+    text-wrap: pretty;
 }
 
 .price {
@@ -732,12 +758,13 @@ footer #footer-shop-info {
 footer #footer-nav {
     grid-area: footer-nav;
     padding-top: 2rem;
+    font-size: .8rem;
 }
 
 footer #footer-nav ul {
     display: flex;
     flex-wrap: wrap;
-    gap: 4rem;
+    gap: 3rem;
 }
 
 footer #footer-nav ul li a{
