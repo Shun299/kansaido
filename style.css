@@ -30,17 +30,39 @@
 }
 
 :root {
+    /* color */
     --bg-color: #f5f1e8;
     --text-color: #2b2b2b;
     --accent-green: #209f4b;
     --accent-lightgreen: #41C56F;
     --accent-brown: #c57763;
+    /* font-family */
     --font-headline: 'New Tegomin', serif;
     --font-jp: 'Higure Gothic R', serif;
     --font-jp-M: 'Higure Gothic M', serif;
     --font-h3: 'YDW aosagi', serif;
     --font-craft: 'craftmincho', serif;
     --font-en: 'Cormorant Garamond', serif;
+    /* space */
+    --space-xs: 0.25rem;
+    --space-sm: .5rem;
+    --space-md: 1rem;
+    --space-lg: 1.5rem;
+    --space-xl: 2rem;
+    --space-2xl: 2.5rem;
+    --space-3xl: 3rem;
+    --space-4xl: 3.5rem;
+    --space-5xl: 4rem;
+    --space-6xl: 6rem;
+    /* font-size */
+    --space-sm: .5rem;
+    --font-size-md: 1rem;
+    --font-size-lg: 1.5rem;
+    --font-size-xl: 2rem;
+    --font-size-2xl: 2.5rem;
+    --font-size-3xl: 3rem;
+    --font-size-4xl: 3.5rem;
+    --font-size-5xl: 4rem;
 }
 
 body {
@@ -51,30 +73,36 @@ body {
 
 header {
     position: fixed;
-    z-index: 10000;
-    display: flex;
-    height: 4.375rem;
+    z-index: 100;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-areas:"img nav";
+    height: var(--space-5xl);
     width: 100%;
     background-color: var(--bg-color);
     align-items: center;
     justify-content: space-evenly;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.7);
 }
 
 header #header-logo img {
+    grid-area: img;
     position: relative;
     z-index: 10;
-    height: 4.375rem;
-    margin: 0 1.5rem;
+    height: var(--space-5xl);
+    margin: 0 .5rem;
 }
 
 header #nav-container {
+    grid-area: nav;
     display: flex;
+    justify-content: end;
     list-style: none;
     gap: 2rem;
     font-family: var(--font-headline);
-    font-size: 1.125rem;
+    font-size: 1.2rem;
     align-items: center;
-    margin-left: auto;
+    margin-right: var(--space-lg);
 }
 
 header nav a {
@@ -83,7 +111,7 @@ header nav a {
     z-index: 10;
     border-bottom: 2px solid transparent;
     border-image: url(./imgs/price-underline.svg) 0 0 100% 0 stretch;
-    padding-bottom: .25rem;
+    padding-bottom: var(--space-xs);
     color: var(--text-color);
     transition: .3s;
 }
@@ -98,13 +126,13 @@ header nav a {
     top: 100%;
     width: max-content;
     white-space: nowrap;
-    padding-bottom: .625rem;
+    padding-bottom: var(--space-sm);
     list-style: none;
     visibility: hidden;
     opacity: 0;
     transition: .3s;
     z-index: 5;
-    padding-top: 1.25rem;
+    padding-top: var(--space-lg);
 }
 
 .sub-menu::before {
@@ -116,6 +144,7 @@ header nav a {
     bottom: 0;
     background-color: var(--bg-color);
     z-index: -1;
+    opacity: 95%;
 }
 
 .sub-menu li {
@@ -125,8 +154,8 @@ header nav a {
 
 .l-menu {
     flex-shrink: 0;
-    margin-right: .625rem;
-    padding-bottom: .625rem;
+    margin-right: var(--space-sm);
+    padding-bottom: var(--space-sm);
 }
 
 .main-menu:hover .sub-menu {
@@ -150,13 +179,35 @@ header nav a {
     border-bottom: none;
 }
 
+.fixed-banner {
+    position: fixed;
+    z-index: 200;
+    opacity: 90%;
+    top: 50%;
+    right: 0;
+    writing-mode: vertical-rl;
+    background-color: var(--accent-green);
+    padding: var(--space-md);
+    font-size: var(--font-size-md);
+    color: var(--bg-color);
+    font-family: "Noto Serif JP", serif;
+    letter-spacing: 5px;
+    box-shadow: 0px 0px 5px rgb(0, 0, 0);
+    text-decoration: none;
+    transition: .2s ease;
+}
+
+.fixed-banner:hover {
+    transform: scale(103%);
+}
+
 #first-view {
     position: relative;
 }
 
 #first-view img{
     width: 100%;
-    margin-top: 4.375rem;
+    margin-top: var(--space-5xl);
 }
 
 #catch-copy {
@@ -164,14 +215,14 @@ header nav a {
     top: 25%;
     right: 8%;
     display: flex;
-    gap: 2rem;
+    gap: var(--space-xl);
 }
 
 #catch-copy span{
     writing-mode: vertical-rl;
     font-family: var(--font-headline);
     color: var(--bg-color);
-    font-size: 2rem;
+    font-size: var(--font-size-xl);
     height: fit-content;
     letter-spacing: 1rem;
     text-shadow:
@@ -182,24 +233,24 @@ header nav a {
 }
 
 #catch-copy span:nth-child(1) {
-    margin-top: 6.5rem;
+    margin-top: var(--space-6xl);
 }
 
 
 section {
-    padding: 6.25rem 1.25rem;
-    margin: 0 auto;
+    padding: var(--space-6xl) var(--space-md);
+    margin: var(--space-6xl) auto;
 }
 
 section h2 {
-    margin-bottom: 4rem;
-    letter-spacing: .5rem;
+    margin-bottom: var(--space-6xl);
+    letter-spacing: var(--space-sm);
 }
 
 .headline {
     font-family: var(--font-headline);
     color: var(--accent-green);
-    font-size: 2rem;
+    font-size: var(--font-size-xl);
     font-weight: normal;
 }
 
@@ -209,7 +260,6 @@ section h2 {
 }
 
 #news-list {
-    margin-bottom: 5rem;
     width: 100%;
     padding: 0 10rem;
 }
@@ -389,30 +439,30 @@ details[open] summary::before {
     margin-top: .625rem;
     font-family: var(--font-jp-M);
     letter-spacing: 2px;
-    font-size: 20px;
+    font-size: 1.25rem;
 }
 
 .price span:nth-child(1) {
-    font-size: 16px;
+    font-size: 1rem;
 }
 
 .price span:nth-child(2) {
-    font-size: 12px;
+    font-size: .75rem;
 }
 
 .cart-input {
     font-family: var(--font-jp-M);
-    font-size: 18px;
+    font-size: 1.125rem;
     display: flex;
     align-items: center;
     margin: .9375rem 0;
 }
 
 .cart-input input {
-    width: 50px;
-    height: 30px;
+    width: 3.125rem;
+    height: 1.875rem;
     border: solid 1.5px var(--text-color);
-    padding-left: 10px;
+    padding-left: .625rem;
 }
 
 .cart-input button {
@@ -420,7 +470,7 @@ details[open] summary::before {
     margin-left: 20px;
     background-color: #209F4B;
     color: var(--bg-color);
-    font-size: 16px;
+    font-size: 1rem;
     letter-spacing: 2px;
     padding: 15px 20px;
     font-family: "Noto Serif JP", serif;
@@ -484,7 +534,7 @@ details[open] summary::before {
 
 .gift-en {
     position: absolute;
-    font-size: 64px;
+    font-size: 4rem;
     font-family: var(--font-craft);
     opacity: 30%;
     color: var(--accent-brown);
