@@ -55,7 +55,7 @@
     --space-5xl: 4rem;
     --space-6xl: 6rem;
     /* font-size */
-    --space-sm: .5rem;
+    --font-size-sm: .5rem;
     --font-size-md: 1rem;
     --font-size-lg: 1.5rem;
     --font-size-xl: 2rem;
@@ -71,12 +71,15 @@ body {
     color: var(--text-color);
 }
 
+.none-event {
+    pointer-events: none;
+}
+
 header {
     position: fixed;
     z-index: 100;
     display: grid;
     grid-template-columns: auto 1fr;
-    grid-template-areas:"img nav";
     height: var(--space-5xl);
     width: 100%;
     background-color: var(--bg-color);
@@ -86,7 +89,6 @@ header {
 }
 
 header #header-logo img {
-    grid-area: img;
     position: relative;
     z-index: 10;
     height: var(--space-5xl);
@@ -94,7 +96,6 @@ header #header-logo img {
 }
 
 header #nav-container {
-    grid-area: nav;
     display: flex;
     justify-content: end;
     list-style: none;
@@ -114,6 +115,7 @@ header nav a {
     padding-bottom: var(--space-xs);
     color: var(--text-color);
     transition: .3s;
+    white-space: nowrap;
 }
 
 .main-menu {
@@ -272,7 +274,7 @@ section h2 {
 }
 
 #news-list ul li {
-    padding: 15px 30px 15px 30px;
+    padding: var(--space-md) var(--space-xl);
     border-bottom: solid 1.5px var(--text-color);
 }
 
@@ -290,7 +292,7 @@ summary {
 
 summary::before {
     content: "＋";
-    margin-right: .7rem;
+    margin-right: var(--space-sm);
 }
 
 details[open] summary::before {
@@ -299,14 +301,14 @@ details[open] summary::before {
 
 .news-details {
     font-family: var(--font-headline);
-    font-size: 1.1rem;
     line-height: 2;
     letter-spacing: 1px;
-    margin: 2.5rem;
+    margin: var(--space-2xl);
+    width: fit-content;
 }
 
 .news-details p {
-    margin: 1rem 0;
+    margin: var(--space-md) 0;
 }
 
 .detail-box {
@@ -318,11 +320,11 @@ details[open] summary::before {
 .detail {
     display: grid;
     place-items: center;
-    font-size: 1.5rem;
+    font-size: var(--font-size-lg);
     background-image: url(../imgs/button.svg);
     background-repeat: no-repeat;
     background-size: 100% 100%;
-    height: 4.625rem;
+    height: 4.6rem;
     min-width: 18rem;
     transition: 0.3s;
 }
@@ -333,20 +335,20 @@ details[open] summary::before {
     color: var(--text-color);
     font-family: var(--font-headline);
     white-space: nowrap;
-    letter-spacing: .2rem;
+    letter-spacing: 2px;
 }
 
 .detail-box img {
     position: absolute;
-    height: 1.5rem;
-    right: -1.875rem;
+    height: var(--space-lg);
+    right: -2rem;
     top: 50%;
     transform: translateY(-50%) translateX(0);
     transition: transform 0.3s ease;
 }
 
 .detail-box a:hover img {
-    transform: translateY(-50%) translateX(1.8rem);
+    transform: translateY(-50%) translateX(50%);
 }
 
 .detail-box a:hover .detail {
@@ -360,7 +362,7 @@ details[open] summary::before {
 }
 
 #recommend h2 {
-    margin-bottom: 5rem;
+    margin-bottom: var(--space-6xl);
 }
 
 .clouds {
@@ -385,44 +387,45 @@ details[open] summary::before {
 
 #reco-container {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    justify-items: center;
+    grid-template-columns: repeat(3, minmax(min-content, max-content));
+    justify-content: center;
+    gap: var(--space-3xl);
 }
 
 .reco-card {
-    width: 21.875rem;
+    width: 22rem;
 }
 
 .reco-card img {
-    width: 21.875rem;
-    height: 21.875rem;
+    width: 22rem;
+    height: 22rem;
     object-fit: cover;
 }
 
 .category {
     display: flex;
-    gap: .625rem;
+    gap: var(--space-sm);
 }
 
 .category span{
+    padding: var(--space-xs);
     font-size: .9rem;
-    padding: .3125rem .625rem;
     background-color: var(--accent-lightgreen);
     letter-spacing: 2px;
     font-family: var(--font-jp-M);
     border-radius: 2px;
-    margin: .625rem 0;
+    margin: var(--space-sm) 0;
 }
 
 .reco-card h3 ,
 .product-card h3 {
     font-family: var(--font-headline);
     font-weight: normal;
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
+    font-size: var(--font-size-lg);
+    margin-bottom: var(--space-md);
     letter-spacing: 2px;
     width: fit-content;
-    padding-bottom: 3px;
+    padding-bottom: .1rem;
     border-bottom: 2px solid transparent;
     border-image: url(./imgs/price-underline.svg) 0 0 100% 0 stretch;
 }
@@ -430,13 +433,12 @@ details[open] summary::before {
 .reco-exp {
     font-family: var(--font-jp-M);
     line-height: 2;
-    letter-spacing: 1px;
-    font-size: .9rem;
+    letter-spacing: 2px;
     text-wrap: pretty;
 }
 
 .price {
-    margin-top: .625rem;
+    margin-top: var(--space-md);
     font-family: var(--font-jp-M);
     letter-spacing: 2px;
     font-size: 1.25rem;
@@ -452,27 +454,26 @@ details[open] summary::before {
 
 .cart-input {
     font-family: var(--font-jp-M);
-    font-size: 1.125rem;
     display: flex;
     align-items: center;
-    margin: .9375rem 0;
+    margin: var(--space-md) 0;
 }
 
 .cart-input input {
-    width: 3.125rem;
-    height: 1.875rem;
+    width: var(--space-3xl);
+    height: var(--space-xl);
     border: solid 1.5px var(--text-color);
-    padding-left: .625rem;
+    padding-left: var(--space-sm);
 }
 
 .cart-input button {
     cursor: pointer;
-    margin-left: 20px;
+    margin-left: var(--space-lg);
     background-color: #209F4B;
     color: var(--bg-color);
-    font-size: 1rem;
+    font-size: var(--font-size-md);
     letter-spacing: 2px;
-    padding: 15px 20px;
+    padding: var(--space-md) 1.25rem;
     font-family: "Noto Serif JP", serif;
     font-weight: 500;
     border: none;
@@ -490,31 +491,36 @@ details[open] summary::before {
 }
 
 .harugasumi {
-    font-size: 18px;
+    font-size: var(--font-size-md);
 }
 
 #gift {
     display: grid;
+    grid-template-rows: repeat(6, max-content);
     place-content: center;
+    row-gap: var(--space-3xl);
 }
 
 #gift h2 {
     text-align: center;
 }
 
+#message-container {
+    justify-items: center;
+}
+
 #message {
     font-family: var(--font-headline);
     text-align: center;
-    margin-bottom: 3rem;
     letter-spacing: 4px;
     font-size: 1.25rem;
 }
 
 #gift h3 {
-    font-size: 4rem;
+    font-size: var(--font-size-5xl);
     font-family: var(--font-craft);
     color: var(--accent-brown);
-    margin-bottom: 2rem;
+    margin-bottom: var(--space-xl);
 }
 
 .gift-item {
@@ -522,19 +528,19 @@ details[open] summary::before {
     display: flex;
     width: 100%;
     border-bottom: solid 1.5px var(--text-color);
-    padding: 0 30px;
+    padding: 0 var(--space-xl);
 }
 
 .gift-item p {
     font-family: var(--font-jp-M);
     letter-spacing: 1px;
     line-height: 2;
-    margin-bottom: 4rem;
+    margin-bottom: var(--space-4xl);
 }
 
 .gift-en {
     position: absolute;
-    font-size: 4rem;
+    font-size: var(--font-size-5xl);
     font-family: var(--font-craft);
     opacity: 30%;
     color: var(--accent-brown);
@@ -556,7 +562,7 @@ details[open] summary::before {
 }
 
 .gift-item.deli {
-    margin-bottom: 5rem;
+    margin-bottom: var(--space-5xl);
 }
 
 .gift-item.deli div span {
@@ -566,11 +572,11 @@ details[open] summary::before {
 }
 
 .gift-item.left {
-    margin-top: 3.125rem;
+    margin-top: var(--space-3xl);
 }
 
 .gift-item.right {
-    margin-top: 3.125rem;
+    margin-top: var(--space-3xl);
     flex-direction: row-reverse;
 }
 
@@ -579,12 +585,13 @@ details[open] summary::before {
 }
 
 #thought {
-    padding: 6.25rem;
-    margin-top: 3.125rem;
+    padding: var(--space-6xl);
+    margin-top: var(--space-3xl);
     display: grid;
     grid-template-columns: auto auto;
-    gap: 6.25rem;
+    gap: var(--space-6xl);
     justify-content: center;
+    align-items: center;
 }
 
 #thought > img {
@@ -596,19 +603,19 @@ details[open] summary::before {
 #thought-contents {
     position: relative;
     display: grid;
-    grid-template-rows: auto auto auto;
-    padding-bottom: 3.125rem;
-    gap: 3.75rem;
+    grid-template-rows: max-content;
+    padding-bottom: var(--space-3xl);
+    gap: var(--space-5xl);
 }
 
 #thought-sentence ::before {
     content: "";
     position: absolute;
-    top: 6.25rem; left: 0; right: 0; bottom: 0;
+    top: var(--space-5xl); left: 0; right: 0; bottom: 0;
     background-image: url(./imgs/kansaido_icon_main_mojinashi.svg);
     background-size: contain;
     background-repeat: no-repeat;
-    opacity: 0.025;
+    opacity: .025;
     z-index: -1;
 }
 
@@ -618,7 +625,7 @@ details[open] summary::before {
 }
 
 #thought-contents h2 span {
-    font-size: 3rem;
+    font-size: var(--font-size-3xl);
     letter-spacing: 0;
 }
 
@@ -626,13 +633,13 @@ details[open] summary::before {
     font-family: var(--font-jp-M);
     display: grid;
     flex-direction: column;
-    gap: 1.5625rem;
+    gap: var(--space-lg);
     letter-spacing: 1px;
     line-height: 2;
 }
 
 #campaign {
-    padding: 6.25rem;
+    padding: var(--space-5xl);
 }
 
 #campaign h2{
@@ -641,9 +648,9 @@ details[open] summary::before {
 
 #cam-banner-contents {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    justify-items: center;
-    gap: 3.125rem;
+    grid-template-columns: repeat(2, minmax(min-content, max-content));
+    justify-content: center;
+    gap: var(--space-3xl);
 }
 
 .cam-banner img {
@@ -653,36 +660,18 @@ details[open] summary::before {
     height: 12.5rem;
 }
 
-.cam-banner a {
-    text-decoration: none;
-    color: var(--text-color);
-}
-
-.cam-banner p {
-    text-align: center;
-    margin-top: 1rem;
-    font-size: 1.25rem;
-    font-family: var(--font-headline);
-}
-
-.cam-banner p span {
-    border-bottom: 1.5px dashed var(--accent-green);
-    font-size: 1.5rem;
-    color: var(--accent-green);
-}
-
 .product-card {
-    width: 18.75rem;
+    width: 19rem;
 }
 
 .product-card img {
-    width: 18.75rem;
-    height: 18.75rem;
+    width: 19rem;
+    height: 19rem;
     object-fit: cover;
 }
 
 #product {
-    padding: 6.25rem 3.25rem;
+    padding: 6.25rem var(--space-3xl);
 }
 
 #product h2 {
@@ -691,14 +680,15 @@ details[open] summary::before {
 
 #product-container {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(3, minmax(min-content, max-content));
     grid-template-rows: auto;
-    justify-items: center;
-    row-gap: 3rem;
+    justify-content: center;
+    column-gap: var(--space-5xl);
+    row-gap: var(--space-3xl);
 }
 
 #product .detail-box {
-    margin-top: 4rem;
+    margin-top: var(--space-6xl);
 }
 
 #shop {
@@ -710,10 +700,44 @@ details[open] summary::before {
     text-align: center;
 }
 
-#shop-contents img{
+#shop-contents {
+    position: relative;
+    margin: 0 auto;
+    width: fit-content;
+}
+
+#shop-img img{
     object-fit: contain;
-    height: 40.625rem;
-    width: auto;
+    height: 40rem;
+}
+
+#shop-deco-detail {
+    position: absolute;
+    top: 10%;
+    left: -10%;
+}
+
+#shop-detail {
+    background-color: #fff;
+    font-family: var(--font-jp-M);
+    color: var(--text-color);
+    font-size: var(--font-size-md);
+    padding: var(--space-2xl);
+    letter-spacing: 1px;
+    line-height: 1.6;
+    box-shadow: 0px 4px 4px rgba(43,43,43,0.5);
+}
+
+#shop-detail #title {
+    font-size: var(--font-size-2xl);
+}
+
+#shop-detail #time {
+    margin: var(--space-md) 0;
+}
+
+#shop-detail #address {
+    font-size: var(--font-size-md);
 }
 
 #shop-deco img{
@@ -723,39 +747,13 @@ details[open] summary::before {
 }
 
 #shop-deco img:first-child {
-    top: 28%;
-    left: -6%;
+    top: -8%;
+    left: -30%;
 }
 
 #shop-deco img:last-child {
-    top: 55%;
-    left: 19%;
-}
-
-#shop-detail {
-    position: absolute;
-    background-color: #fff;
-    top: 30%;
-    left: 5%;
-    font-family: var(--font-jp-M);
-    color: var(--text-color);
-    font-size: 1.125rem;
-    padding: 2.5rem;
-    letter-spacing: 1px;
-    line-height: 1.6;
-    box-shadow: 0px 4px 4px rgba(43,43,43,0.5);
-}
-
-#shop-detail #title {
-    font-size: 2.375rem;
-}
-
-#shop-detail #time {
-    margin: 1.25rem 0;
-}
-
-#shop-detail #address {
-    font-size: 1rem;
+    bottom: -10%;
+    right: -25%;
 }
 
 footer {
@@ -774,22 +772,22 @@ footer {
 #imgs-contents {
     grid-area: imgs-contents;
     width: fit-content;
-    padding: 1.875rem 3.125rem;
+    padding: var(--space-xl) var(--space-3xl);
 }
 
 footer img {
-    width: 15.625rem;
+    width: 15.5rem;
 }
 
 footer #icons {
     display: flex;
-    width: 15.625rem;
+    width: 15.5rem;
     justify-content: space-evenly;
 }
 
 footer #icons img{
-    width: 3.125rem;
-    height: 3.125rem;
+    width: 3rem;
+    height: 3rem;
 }
 
 #footer-shop-info , #footer-nav {
@@ -801,20 +799,20 @@ footer #icons img{
 
 footer #footer-shop-info {
     grid-area: footer-shop-info;
-    padding-left: 3.125rem;
+    padding-left: var(--space-3xl);
     width: fit-content;
 }
 
 footer #footer-nav {
     grid-area: footer-nav;
-    padding-top: 2rem;
+    padding-top: var(--space-xl);
     font-size: .8rem;
 }
 
 footer #footer-nav ul {
     display: flex;
     flex-wrap: wrap;
-    gap: 3rem;
+    gap: var(--space-3xl);
 }
 
 footer #footer-nav ul li a{
@@ -836,5 +834,5 @@ footer #footer-nav ul li a:hover{
 }
 
 small {
-    margin: 0 3.125rem 3.125rem 0;
+    margin: 0 var(--space-3xl) var(--space-3xl) 0;
 }
