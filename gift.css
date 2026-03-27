@@ -15,11 +15,6 @@
 }
 
 @font-face {
-    font-family: 'YDW aosagi';
-    src: url('../fonts/YDWaosagi.otf') format('opentype');
-}
-
-@font-face {
     font-family: 'New Tegomin';
     src: url('../fonts/New_Tegomin/NewTegomin-Regular.ttf') format('truetype');
 }
@@ -40,9 +35,7 @@
     --font-headline: 'New Tegomin', serif;
     --font-jp: 'Higure Gothic R', serif;
     --font-jp-M: 'Higure Gothic M', serif;
-    --font-h3: 'YDW aosagi', serif;
     --font-craft: 'craftmincho', serif;
-    --font-en: 'Cormorant Garamond', serif;
     /* space */
     --space-xs: 0.25rem;
     --space-sm: .5rem;
@@ -72,9 +65,9 @@ body {
 }
 
 .main-text {
-    font-family: var(--font-jp-M);
+    font-family: var(--font-jp);
     font-size: var(--font-size-md);
-    letter-spacing: 2px;
+    letter-spacing: 1px;
     line-height: 2;
 }
 
@@ -193,9 +186,14 @@ header nav a {
     border-bottom: none;
 }
 
+.image {
+    width: 300px;
+    height: 300px;
+}
+
 .image img{
-    width: 400px;
-    height: 400px;
+    width: 300px;
+    height: 300px;
     object-fit: cover;
 }
 
@@ -222,7 +220,17 @@ section h2 {
 #message {
     text-align: center;
     font-family: var(--font-headline);
-    font-size: var();
+    font-size: 1.25rem;
+    letter-spacing: 4px;
+}
+
+.sections {
+    border: solid 1px var(--text-color);
+}
+
+.packing-el-exp-title {
+    font-family: var(--font-jp-M);
+    font-size: var(--font-size-lg);
 }
 
 .detail-box {
@@ -230,6 +238,13 @@ section h2 {
     grid-template-columns: 1fr auto;
     place-items: center;
 }
+
+.packing-el {
+    display: flex;
+    gap: var(--space-3xl);
+    align-items: end;
+}
+
 
 .detail {
     display: grid;

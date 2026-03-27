@@ -15,18 +15,8 @@
 }
 
 @font-face {
-    font-family: 'YDW aosagi';
-    src: url('../fonts/YDWaosagi.otf') format('opentype');
-}
-
-@font-face {
     font-family: 'New Tegomin';
     src: url('../fonts/New_Tegomin/NewTegomin-Regular.ttf') format('truetype');
-}
-
-@font-face {
-    font-family: 'craftmincho';
-    src: url(../fonts/craftmincho.otf) format('opentype');
 }
 
 :root {
@@ -40,9 +30,6 @@
     --font-headline: 'New Tegomin', serif;
     --font-jp: 'Higure Gothic R', serif;
     --font-jp-M: 'Higure Gothic M', serif;
-    --font-h3: 'YDW aosagi', serif;
-    --font-craft: 'craftmincho', serif;
-    --font-en: 'Cormorant Garamond', serif;
     /* space */
     --space-xs: 0.25rem;
     --space-sm: .5rem;
@@ -69,6 +56,7 @@ body {
     background-color: var(--bg-color);
     font-family: var(--font-jp);
     color: var(--text-color);
+    overflow-x: hidden;
 }
 
 .main-text {
@@ -247,7 +235,6 @@ header nav a {
     margin-top: var(--space-6xl);
 }
 
-
 section {
     padding: var(--space-6xl) var(--space-md);
     margin: var(--space-6xl) auto;
@@ -367,7 +354,6 @@ details[open] summary::before {
 
 #recommend {
     position: relative;
-    overflow-x: clip;
 }
 
 #recommend h2 {
@@ -382,11 +368,13 @@ details[open] summary::before {
 .clouds.right1 {
     top: 16%;
     right: -10%;
+    z-index: 20;
 }
 
 .clouds.left2 {
-    bottom: 0%;
+    top: 16%;
     left: -10%;
+    z-index: 20;
 }
 
 #recommend h2 {
@@ -524,7 +512,8 @@ details[open] summary::before {
 
 #gift h3 {
     font-size: var(--font-size-5xl);
-    font-family: var(--font-craft);
+    font-family: var(--font-headline);
+    font-weight: normal;
     color: var(--accent-brown);
     margin-bottom: var(--space-xl);
 }
@@ -547,23 +536,24 @@ details[open] summary::before {
 .gift-en {
     position: absolute;
     font-size: var(--font-size-5xl);
-    font-family: var(--font-craft);
+    font-family: var(--font-headline);
+    font-weight: normal;
     opacity: 30%;
     color: var(--accent-brown);
 }
 
 .gift-en.pack {
-    bottom: -10px;
+    bottom: -6%;
     right: 0;
 }
 
 .gift-en.sce {
-    bottom: -10px;
+    bottom: -6%;
     left: 0;
 }
 
 .gift-en.deli {
-    bottom: -10px;
+    bottom: -6%;
     right: 0;
 }
 
@@ -841,4 +831,39 @@ footer #footer-nav ul li a:hover{
 
 small {
     margin: 0 var(--space-3xl) var(--space-3xl) 0;
+}
+
+/* InterSectionObseverのcss */
+
+.move_upwards {
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.move_upwards.active {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 1.2s ease-out, transform 1.2s ease-out;
+}
+
+.right1 {
+    opacity: 0;
+    transform: translateX(30px);
+}
+
+.right1.active {
+    opacity: 1;
+    transform: translateX(0);
+    transition: opacity 1.2s ease-out, transform 1.2s ease-out;
+}
+
+.left2 {
+    opacity: 0;
+    transform: translateX(-30px);
+}
+
+.left2.active {
+    opacity: 1;
+    transform: translateX(0);
+    transition: opacity 1.2s ease-out, transform 1.2s ease-out;
 }

@@ -6,6 +6,7 @@
         <title>甘彩堂 | ホームページ</title>
         <link rel="icon" type="image/png" href="../imgs/kansaido_favicon2.png">
         <link rel="stylesheet" href="style.css">
+        <script src="main.js"></script>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200..900&display=swap" rel="stylesheet">
@@ -79,7 +80,7 @@
             <div id="first-view">
                 <img src="../imgs/kansaido_firstview.png">
             </div>
-            <div id="catch-copy">
+            <div id="catch-copy" class="move_upwards">
                 <span>季節を包む和菓子を。</span>
                 <span>創業四十九年、</span>
             </div>
@@ -155,61 +156,63 @@
             <section id="recommend">
                 <img class="clouds right1 none-event" src="../imgs/wagumo.png">
                 <img class="clouds left2 none-event" src="../imgs/wagumo2.png">
-                <h2 class="headline">― ３月のおすすめ ―</h2>
-                <div id="reco-container">
-                    <div class="reco-card">
-                        <img src="../imgs/sakuramochi.jpg">
-                        <div class="category">
-                            <span>生菓子</span>
-                            <span>焼き物</span>
+                    <h2 class="headline">― ３月のおすすめ ―</h2>
+                <div class="move_upwards">
+                    <div id="reco-container">
+                        <div class="reco-card">
+                            <img src="../imgs/sakuramochi.jpg">
+                            <div class="category">
+                                <span>生菓子</span>
+                                <span>焼き物</span>
+                            </div>
+                            <h3>桜餅</h3>
+                            <p class="reco-exp main-text">道明寺粉でもちもちと仕立てた生地に、<br>
+                                ほどよい甘さのこし餡を包みました。<br>
+                                塩漬けした桜葉のほのかな香りが、<br>
+                                春の訪れを感じさせる一品です。
+                            </p>
+                            <p class="price"><span>¥</span>350<span>（税込み）</span></p>
+                            <div class="cart-input">
+                                <span>数量：</span>
+                                <input type="number" min="1" max="99" placeholder="-">
+                                <button>カートへ入れる</button>
+                            </div>
                         </div>
-                        <h3>桜餅</h3>
-                        <p class="reco-exp main-text">道明寺粉でもちもちと仕立てた生地に、<br>
-                            ほどよい甘さのこし餡を包みました。<br>
-                            塩漬けした桜葉のほのかな香りが、<br>
-                            春の訪れを感じさせる一品です。
-                        </p>
-                        <p class="price"><span>¥</span>350<span>（税込み）</span></p>
-                        <div class="cart-input">
-                            <span>数量：</span>
-                            <input type="number" min="1" max="99" placeholder="-">
-                            <button>カートへ入れる</button>
+                        <div  class="reco-card">
+                            <img src="../imgs/harugasumi.jpg">
+                            <div class="category">
+                                <span>生菓子</span>
+                                <span>煉り物</span>
+                            </div>
+                            <h3>春霞<span class="harugasumi">（はるがすみ）</span></h3>
+                            <p class="reco-exp main-text">淡い桜色の練り切りで、春の霞を表現しました。<br>
+                                ほのかな塩味が、上品な甘さを引き立てます。<br>
+                                贈り物にも人気の季節菓子です。
+                            </p>
+                            <p class="price"><span>¥</span>420<span>（税込み）</span></p>
+                            <div class="cart-input">
+                                <span>数量：</span>
+                                <input type="number" min="1" max="99" placeholder="-">
+                                <button>カートへ入れる</button>
+                            </div>
                         </div>
-                    </div>
-                    <div  class="reco-card">
-                        <img src="../imgs/harugasumi.jpg">
-                        <div class="category">
-                            <span>生菓子</span>
-                            <span>煉り物</span>
-                        </div>
-                        <h3>春霞<span class="harugasumi">（はるがすみ）</span></h3>
-                        <p class="reco-exp main-text">淡い桜色の練り切りで、春の霞を表現しました。<br>
-                            ほのかな塩味が、上品な甘さを引き立てます。<br>
-                            贈り物にも人気の季節菓子です。
-                        </p>
-                        <p class="price"><span>¥</span>420<span>（税込み）</span></p>
-                        <div class="cart-input">
-                            <span>数量：</span>
-                            <input type="number" min="1" max="99" placeholder="-">
-                            <button>カートへ入れる</button>
-                        </div>
-                    </div>
-                    <div  class="reco-card">
-                        <img src="../imgs/chadora.jpg">
-                        <div class="category">
-                            <span>生菓子</span>
-                            <span>焼き物</span>
-                        </div>
-                        <h3>加賀棒茶どら</h3>
-                        <p class="reco-exp main-text">金沢名産の加賀棒茶を生地に練り込み、<br>
-                            香ばしさを楽しめるどら焼きに仕上げました。<br>
-                            甘さ控えめで、男性にも人気の一品です。
-                        </p>
-                        <p class="price"><span>¥</span>320<span>（税込み）</span></p>
-                        <div class="cart-input">
-                            <span>数量：</span>
-                            <input type="number" min="1" max="99" placeholder="-">
-                            <button>カートへ入れる</button>
+                        <div  class="reco-card">
+                            <img src="../imgs/chadora.jpg">
+                            <div class="category">
+                                <span>生菓子</span>
+                                <span>焼き物</span>
+                            </div>
+                            <h3>加賀棒茶どら</h3>
+                            <p class="reco-exp main-text">金沢名産の加賀棒茶を生地に練り込み、<br>
+                                香ばしさを楽しめるどら焼きに仕上げました。<br>
+                                甘さ控えめで、男性にも人気の一品です。
+                            </p>
+                            <p class="price"><span>¥</span>320<span>（税込み）</span></p>
+                            <div class="cart-input">
+                                <span>数量：</span>
+                                <input type="number" min="1" max="99" placeholder="-">
+                                <button>カートへ入れる</button>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -219,7 +222,7 @@
                 <div id="message-container">
                     <p id="message">大切な方へ、安心して贈れる和菓子をご提供いたします。</p>
                 </div>
-                <div class="gift-item left">
+                <div class="gift-item left move_upwards">
                     <div>
                         <h3>梱包</h3>
                         <p class="main-text">甘彩堂では、ひとつひとつ手作業で丁寧にお包みしております。<br>
@@ -228,9 +231,9 @@
                             ご注文時に内容をご入力ください。<br>
                         </p>
                     </div>
-                    <span class="gift-en left pack">Packaging</span>
+                    <span class="gift-en left pack none-event">Packaging</span>
                 </div>
-                <div class="gift-item right">
+                <div class="gift-item right move_upwards">
                     <div>
                         <h3>場面</h3>
                         <p class="main-text">季節のご挨拶からお祝い、帰省の手土産まで、<br>
@@ -240,9 +243,9 @@
                             贈る相手にふさわしい一箱をお選びいただけます。
                         </p>
                     </div>
-                    <span class="gift-en right sce">Scene</span>
+                    <span class="gift-en right sce none-event">Scene</span>
                 </div>
-                <div class="gift-item left deli">
+                <div class="gift-item left deli move_upwards">
                     <div>
                         <h3>配送</h3>
                         <p class="main-text">ご注文いただいた商品は、最短で翌営業日に発送いたします。<br>
@@ -252,7 +255,7 @@
                             なお、税込7,000円以上のご注文で <span>送料無料</span> とさせていただきます。<br>
                         </p>
                     </div>
-                    <span class="gift-en left deli">Delivery</span>
+                    <span class="gift-en left deli none-event">Delivery</span>
                 </div>
                 <div class="detail-box">
                     <a href="#">
@@ -281,10 +284,10 @@
             <section id="campaign">
                 <h2 class="headline">― 特典・特集 ―</h2>
                 <div id="cam-banner-contents">
-                    <div class="cam-banner">
+                    <div class="cam-banner move_upwards">
                         <img src="./imgs/line_banner.jpg">
                     </div>
-                    <div class="cam-banner">
+                    <div class="cam-banner move_upwards">
                         <img src="./imgs/delivery_banner.jpg">
                     </div>
                 </div>
@@ -423,8 +426,8 @@
                             <p id="address">〒920-0831<br>石川県金沢市東山1丁目12-8<br>電話番号：XXX-XXX-XXXX</p>
                         </div>
                         <div id="shop-deco">
-                            <img class="none-event" src="./imgs/shop-wagumo.png">
-                            <img class="none-event" src="./imgs/shop-wagumo2.png">
+                            <img class="none-event right1" src="./imgs/shop-wagumo.png">
+                            <img class="none-event left2" src="./imgs/shop-wagumo2.png">
                         </div>
                     </div>
                 </div>
