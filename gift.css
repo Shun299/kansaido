@@ -222,15 +222,51 @@ section h2 {
     font-family: var(--font-headline);
     font-size: 1.25rem;
     letter-spacing: 4px;
+    margin-bottom: var(--space-6xl);
 }
 
 .sections {
+    position: relative;
     border: solid 1px var(--text-color);
 }
 
-.packing-el-exp-title {
+.subheading h3{
+    position: absolute;
+    font-size: var(--font-size-5xl);
+    font-weight: normal;
+    font-family: var(--font-headline);
+    color: var(--accent-brown);
+    background-color: var(--bg-color);
+    letter-spacing: 2px;
+}
+
+#packing .subheading h3 {
+    padding: 20px;
+    top: -3.7%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#scene .subheading h3 {
+    padding: 20px;
+    top: -2.5%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.exp {
+    text-align: center;
+}
+
+.exp.main-text {
+    display: grid;
+    gap: var(--space-xl);
+}
+
+.exp-title {
     font-family: var(--font-jp-M);
     font-size: var(--font-size-lg);
+    font-weight: normal;
 }
 
 .detail-box {
@@ -245,6 +281,24 @@ section h2 {
     align-items: end;
 }
 
+.el-compilation {
+    display: grid;
+    gap: var(--space-6xl);
+    padding: 0 var(--space-6xl);
+}
+
+.scene-el {
+    display: grid;
+    grid-template-rows: 1fr auto;
+    justify-items: center;
+    row-gap: var(--space-5xl);
+}
+
+.scene-cont {
+    display: flex;
+    gap: var(--space-5xl);
+    justify-content: center;
+}
 
 .detail {
     display: grid;
