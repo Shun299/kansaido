@@ -60,7 +60,7 @@ body {
 }
 
 .main-text {
-    font-family: var(--font-jp-M);
+    font-family: var(--font-jp);
     font-size: var(--font-size-md);
     letter-spacing: 2px;
     line-height: 2;
@@ -447,7 +447,6 @@ details[open] summary::before {
 }
 
 .cart-input {
-    font-family: var(--font-jp-M);
     display: flex;
     align-items: center;
     margin: var(--space-md) 0;
@@ -527,7 +526,6 @@ details[open] summary::before {
 }
 
 .gift-item p {
-    font-family: var(--font-jp-M);
     letter-spacing: 1px;
     line-height: 2;
     margin-bottom: var(--space-4xl);
@@ -626,7 +624,6 @@ details[open] summary::before {
 }
 
 #thought-sentence {
-    font-family: var(--font-jp-M);
     display: grid;
     flex-direction: column;
     gap: var(--space-lg);

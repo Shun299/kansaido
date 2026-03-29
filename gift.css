@@ -267,6 +267,8 @@ section h2 {
     font-family: var(--font-jp-M);
     font-size: var(--font-size-lg);
     font-weight: normal;
+    letter-spacing: 2px;
+    line-height: 2;
 }
 
 .detail-box {
@@ -298,6 +300,47 @@ section h2 {
     display: flex;
     gap: var(--space-5xl);
     justify-content: center;
+}
+
+.scene-el-sent {
+    text-align: center;
+    margin-top: var(--space-sm);
+}
+
+.scene-el-sent p {
+    margin-top: var(--space-sm);
+}
+
+.sent-title {
+    font-family: var(--font-jp-M);
+    font-size: 1.25rem;
+    font-weight: normal;
+    letter-spacing: 2px;
+    line-height: 2;
+}
+
+.set-container{
+    display: grid;
+    grid-template-rows: repeat(4, max-content);
+    row-gap: var(--space-sm);
+}
+
+.set-contents {
+    text-align: justify;
+}
+
+.set-list {
+    list-style: none;
+}
+
+.set-list li {
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+}
+
+.quantity {
+    align-content: end;
 }
 
 .detail {
