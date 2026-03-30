@@ -14,5 +14,5 @@ document.addEventListener('DOMContentLoaded', () => {
         })
     },option);
 
-    document.querySelectorAll('.move_upwards, .right1, .left2, .active').forEach(el => observer.observe(el));
+    document.querySelectorAll('.move_upwards, .right1, .left2, .blur , .active').forEach(el => observer.observe(el));
 })

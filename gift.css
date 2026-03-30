@@ -20,8 +20,8 @@
 }
 
 @font-face {
-    font-family: 'craftmincho';
-    src: url(../fonts/craftmincho.otf) format('opentype');
+    font-family: 'YujiSyuku-Regular';
+    src: url('./fonts/YujiSyuku-Regular.ttf') format('truetype');
 }
 
 :root {
@@ -35,7 +35,7 @@
     --font-headline: 'New Tegomin', serif;
     --font-jp: 'Higure Gothic R', serif;
     --font-jp-M: 'Higure Gothic M', serif;
-    --font-craft: 'craftmincho', serif;
+    --font-yuji: 'YujiSyuku-Regular', serif;
     /* space */
     --space-xs: 0.25rem;
     --space-sm: .5rem;
@@ -489,3 +489,24 @@ small {
     margin: 0 var(--space-3xl) var(--space-3xl) 0;
 }
 
+/* InterSectionObseverのcss */
+
+.move_upwards {
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.move_upwards.active {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 1.2s ease-out, transform 1.2s ease-out;
+}
+
+.blur {
+    filter: blur(5px);
+}
+
+.blur.active {
+    filter: blur(0px);
+    transition: filter 1.7s;
+}
