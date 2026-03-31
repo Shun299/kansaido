@@ -1,0 +1,443 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'Higure Gothic R';
+    src: url('../fonts/HigureGothic/HigureGothic-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Higure Gothic M';
+    src: url('../fonts/HigureGothic/HigureGothic-Medium.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'New Tegomin';
+    src: url('../fonts/New_Tegomin/NewTegomin-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'YujiSyuku-Regular';
+    src: url('./fonts/YujiSyuku-Regular.ttf') format('truetype');
+}
+
+:root {
+    /* color */
+    --bg-color: #f5f1e8;
+    --text-color: #2b2b2b;
+    --accent-green: #209f4b;
+    --accent-lightgreen: #41C56F;
+    --accent-brown: #c57763;
+    /* font-family */
+    --font-headline: 'New Tegomin', serif;
+    --font-jp: 'Higure Gothic R', serif;
+    --font-jp-M: 'Higure Gothic M', serif;
+    --font-yuji: 'YujiSyuku-Regular', serif;
+    /* space */
+    --space-xs: 4px;
+    --space-sm: 8px;
+    --space-md: 16px;
+    --space-lg: 24px;
+    --space-xl: 32px;
+    --space-2xl: 40px;
+    --space-3xl: 48px;
+    --space-4xl: 56px;
+    --space-5xl: 64px;
+    --space-6xl: 96px;
+    /* font-size */
+    --font-size-sm: 8px;
+    --font-size-md: 16px;
+    --font-size-lg: 24px;
+    --font-size-xl: 32px;
+    --font-size-2xl: 40px;
+    --font-size-3xl: 48px;
+    --font-size-4xl: 56px;
+    --font-size-5xl: 64px;
+}
+
+body {
+    background-color: var(--bg-color);
+    font-family: var(--font-jp);
+    color: var(--text-color);
+}
+
+.main-text {
+    font-family: var(--font-headline);
+    font-size: var(--font-size-md);
+    letter-spacing: 2px;
+    line-height: 2;
+}
+
+#background .sentence {
+    font-family: var(--font-headline);
+    font-size: var(--font-size-md);
+    letter-spacing: 5px;
+    line-height: 3;
+}
+
+.h3-font {
+    font-family: var(--font-yuji);
+    font-size: var(--font-size-lg);
+    letter-spacing: 8px;
+    line-height: 2;
+    font-weight: normal;
+}
+
+header {
+    position: fixed;
+    z-index: 100;
+    display: grid;
+    top: 0;
+    left: 0;
+    grid-template-columns: auto 1fr;
+    height: var(--space-5xl);
+    width: 100%;
+    background-color: var(--bg-color);
+    align-items: center;
+    justify-content: space-evenly;
+    box-shadow: 0rem 0rem .3125rem rgba(0, 0, 0, 0.7);
+}
+
+header #header-logo img {
+    position: relative;
+    z-index: 10;
+    height: var(--space-5xl);
+    margin: 0 8px;
+}
+
+header #nav-container {
+    display: flex;
+    justify-content: end;
+    list-style: none;
+    gap: 32px;
+    font-family: var(--font-headline);
+    font-size: 19.2px;
+    align-items: center;
+    margin-right: var(--space-lg);
+}
+
+header nav a {
+    text-decoration: none;
+    position: relative;
+    z-index: 10;
+    border-bottom: .125rem solid transparent;
+    border-image: url(./imgs/price-underline.svg) 0 0 100% 0 stretch;
+    padding-bottom: var(--space-xs);
+    color: var(--text-color);
+    transition: .3s;
+    white-space: nowrap;
+}
+
+.main-menu {
+    position: relative;
+}
+
+.sub-menu {
+    position: absolute;
+    left: 50%;
+    top: 100%;
+    width: max-content;
+    white-space: nowrap;
+    padding-bottom: var(--space-sm);
+    list-style: none;
+    visibility: hidden;
+    opacity: 0;
+    transition: .3s;
+    z-index: 5;
+    padding-top: var(--space-lg);
+}
+
+.sub-menu::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100vw;
+    right: -100vw;
+    bottom: 0;
+    background-color: var(--bg-color);
+    z-index: -1;
+    opacity: 95%;
+}
+
+.sub-menu li {
+    display: flex;
+    align-items: flex-end;
+}
+
+.l-menu {
+    flex-shrink: 0;
+    margin-right: var(--space-sm);
+    padding-bottom: var(--space-sm);
+}
+
+.main-menu:hover .sub-menu {
+    visibility: visible;
+    opacity: 1;
+}
+
+.main-menu:hover > a {
+    color: var(--accent-green);
+}
+
+.sub-menu:hover a {
+    color: var(--accent-green);
+}
+
+#cart a {
+    border-bottom: none;
+}
+
+#my-page a {
+    border-bottom: none;
+}
+
+main {
+    margin: calc(var(--space-6xl) * 3) auto;
+    display: grid;
+    gap: calc(var(--space-6xl) * 3);
+}
+
+.headline {
+    font-family: var(--font-headline);
+    color: var(--accent-green);
+    font-size: var(--font-size-xl);
+    font-weight: normal;
+    letter-spacing: var(--space-sm);
+    text-align: center;
+}
+
+#background {
+    position: relative;
+    height: max-content;
+    width: 100%;
+}
+
+#background::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(./imgs/kansaido_firstview.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.3);
+    background-blend-mode: overlay;
+    filter: blur(5px);
+    z-index: 0;
+}
+
+#background .contents {
+    position: relative;
+    z-index: 1;
+    writing-mode: vertical-rl;
+    height: 100%;
+    width: 100%;
+    color: #fff;
+    padding: 5rem;
+    text-shadow:
+    0px 0px 7px rgb(0, 0, 0),
+    0px 0px 7px rgb(0, 0, 0);
+}
+
+#background h3 {
+    text-align: center;
+}
+
+#background .sentence {
+    display: grid;
+    gap: var(--space-5xl);
+    margin-right: calc(var(--space-6xl) * 1.5);
+}
+
+#posture .h3-font,#involvement .h3-font,#from-now .h3-font {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.swiper {
+    width: 400px;
+    height: 500px;
+}
+
+.swiper-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#arrow {
+    display: flex;
+    margin-top: var(--space-md);
+    justify-content: center;
+    gap: calc(var(--space-6xl) * 1.5);
+}
+
+#arrow img {
+    width: 100px;
+}
+
+#arrow img:first-child {
+    transform: scaleX(-1);
+}
+
+#posture .contents {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: var(--space-6xl);
+}
+
+#posture .contents .sentence {
+    display: grid;
+    gap: var(--space-lg);
+}
+
+#involvement {
+    position: relative;
+}
+
+#involvement::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(./imgs/higashi_chaya.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: rgba(255, 255, 255, 0.5);
+    background-blend-mode: overlay;
+    filter: blur(5px);
+    z-index: 0;
+}
+
+#involvement .contents {
+    position: relative;
+    z-index: 1;
+    height: 100%;
+    width: 100%;
+    color: var(--text-color);
+    padding: 5rem;
+    text-shadow:
+    0px 0px 7px rgb(255, 255, 255),
+    0px 0px 7px rgb(255, 255, 255);
+    text-align: center;
+}
+
+#involvement .main-text {
+    display: grid;
+    gap: var(--space-lg);
+}
+
+#from-now {
+    position: relative;
+}
+
+#from-now::before {
+    content: "";
+    width: 250px;
+    height: 250px;
+    position: absolute;
+    background-image: url(./imgs/kansaido_icon_main.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    top: 35%;
+    left: 40%;
+    z-index: 0;
+    opacity: .1;
+}
+
+#from-now .main-text {
+    position: relative;
+    text-align: center;
+    display: grid;
+    gap: var(--space-lg);
+    z-index: 1;
+}
+
+footer {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+        "imgs-contents footer-nav"
+        "footer-shop-info small"
+    ;
+    width: 100%;
+    height: 400px;
+    background-color: var(--accent-green);
+}
+
+#imgs-contents {
+    grid-area: imgs-contents;
+    width: fit-content;
+    padding: var(--space-xl) var(--space-3xl);
+}
+
+footer img {
+    width: 248px;
+}
+
+footer #icons {
+    display: flex;
+    width: 248px;
+    justify-content: space-evenly;
+}
+
+footer #icons img{
+    width: 48px;
+    height: 48px;
+}
+
+#footer-shop-info , #footer-nav {
+    color: var(--bg-color);
+    font-family: var(--font-jp-M);
+    line-height: 1.8;
+    letter-spacing: .0625rem;
+}
+
+footer #footer-shop-info {
+    grid-area: footer-shop-info;
+    padding-left: var(--space-3xl);
+    width: fit-content;
+}
+
+footer #footer-nav {
+    grid-area: footer-nav;
+    padding-top: var(--space-xl);
+    font-size: 12.8px;
+}
+
+footer #footer-nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-3xl);
+}
+
+footer #footer-nav ul li a{
+    text-decoration: none;
+    color: inherit;
+}
+
+footer #footer-nav ul li a:hover{
+  text-decoration: underline;
+}
+
+#footer-small {
+    display: grid;
+    grid-area: small;
+    justify-content: end;
+    align-items: end;
+    color: var(--bg-color);
+    font-family: var(--font-jp-M);
+}
+
+small {
+    margin: 0 var(--space-3xl) var(--space-3xl) 0;
+}
