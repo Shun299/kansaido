@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>甘彩堂 | 甘彩堂の想いについて</title>
+        <link rel="icon" type="image/png" href="../imgs/kansaido_favicon2.png">
+        <link rel="stylesheet" href="product.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200..900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        <script src="product.js"></script>
+    </head>
+    <body>
+        <header>
+            <a href="./index.html" id="header-logo">
+                <img src="../imgs/kansaido_logo.svg">
+            </a>
+            <nav>
+                <ul id="nav-container">
+                    <li class="main-menu">
+                        <a href="#news">お知らせ</a>
+                    </li>
+                    <li class="main-menu">
+                        <a href="#recommend">今月のおすすめ</a>
+                    </li>
+                    <li class="main-menu">
+                        <a href="./index.html#gift">贈りもの</a>
+                        <ul class="sub-menu">
+                            <li>
+                                <img class="l-menu" src="../imgs/l-menu.svg">
+                                <a href="./gift.html">贈りものについて</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="main-menu">
+                        <a href="./index.html#thought">甘彩堂の想い</a>
+                        <ul class="sub-menu">
+                            <li>
+                                <img class="l-menu" src="../imgs/l-menu.svg">
+                                <a href="./thoughts.html">甘彩堂の想いについて</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="main-menu">
+                        <a href="#campaign">特典・特集</a>
+                    </li>
+                    <li class="main-menu">
+                        <a href="#product">商品</a>
+                        <ul class="sub-menu">
+                            <li>
+                                <img class="l-menu" src="../imgs/l-menu.svg">
+                                <a href="#news">商品一覧へ</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="main-menu">
+                        <a href="#shop">店舗情報</a>
+                    </li>
+                    <li id="cart">
+                        <a href="#">
+                            <img src="../imgs/cart_icon.svg">
+                        </a>
+                    </li>
+                    <li id="my-page">
+                        <a href="#">
+                            <img src="../imgs/usericon.svg">
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <h2 class="headline">― 商品一覧 ―</h2>
+            <section id="selections">
+                <div class="selections__card">
+                    <a href="#"><h3>単品商品へ</h3></a>
+                    <p>丁寧に仕立てたお菓子を、<br>気軽にお楽しみいただけます。</p>
+                </div>
+                <div class="selections__card">
+                    <a href="#"><h3>詰め合わせ商品へ</h3></a>
+                    <p>贈り物やご挨拶に最適な、<br>季節のお菓子を詰め合わせました。</p>
+                </div>
+            </section>
+            <section id="individual-items">
+                <h3>単品商品</h3>
+                <seciton id="search">
+                    <div>
+                        <h4>種類で探す</h4>
+                        <div>
+                            <div>
+                                <span>菓子の種類</span>
+                                <div>
+                                    <input type="checkbox"><label>生菓子</label><br>
+                                    <input type="checkbox"><label>半生菓子</label><br>
+                                    <input type="checkbox"><label>干菓子</label><br>
+                                </div>
+                            </div>
+                            <div>
+                                <span>製法・お品の分類</span>
+                                <div>
+                                    <input type="checkbox"><label>餅物</label><br>
+                                    <input type="checkbox"><label>蒸し物</label><br>
+                                    <input type="checkbox"><label>焼き物</label><br>
+                                    <input type="checkbox"><label>流し物</label><br>
+                                    <input type="checkbox"><label>煉り物</label><br>
+                                    <input type="checkbox"><label>揚げ物</label><br>
+                                    <input type="checkbox"><label>あん物</label><br>
+                                    <input type="checkbox"><label>おか物</label><br>
+                                    <input type="checkbox"><label>打ち物</label><br>
+                                    <input type="checkbox"><label>押し物</label><br>
+                                    <input type="checkbox"><label>掛け物</label><br>
+                                    <input type="checkbox"><label>あめ物</label><br>
+                                </div>  
+                            </div>
+                        </div>
+                    </div>
+                </seciton>
+                <section id="products">
+                    <div id="product-container">
+                        <div class="product-card">
+                            <img src="../imgs/sakuramochi.jpg">
+                            <div class="category">
+                                <span>生菓子</span>
+                                <span>焼き物</span>
+                            </div>
+                            <h3>桜餅</h3>
+                            <p class="reco-exp main-text">道明寺粉でもちもちと仕立てた生地に、<br>
+                                ほどよい甘さのこし餡を包みました。<br>
+                                塩漬けした桜葉のほのかな香りが、<br>
+                                春の訪れを感じさせる一品です。
+                            </p>
+                            <p class="price"><span>¥</span>350<span>（税込み）</span></p>
+                            <div class="cart-input">
+                                <span>数量：</span>
+                                <input type="number" min="1" max="99" placeholder="-">
+                                <button>カートへ入れる</button>
+                            </div>
+                        </div>
+                        <div  class="product-card">
+                            <img src="../imgs/harugasumi.jpg">
+                            <div class="category">
+                                <span>生菓子</span>
+                                <span>煉り物</span>
+                            </div>
+                            <h3>春霞<span class="harugasumi">（はるがすみ）</span></h3>
+                            <p class="reco-exp main-text">淡い桜色の練り切りで、春の霞を表現しました。<br>
+                                ほのかな塩味が、上品な甘さを引き立てます。<br>
+                                贈り物にも人気の季節菓子です。
+                            </p>
+                            <p class="price"><span>¥</span>420<span>（税込み）</span></p>
+                            <div class="cart-input">
+                                <span>数量：</span>
+                                <input type="number" min="1" max="99" placeholder="-">
+                                <button>カートへ入れる</button>
+                            </div>
+                        </div>
+                        <div  class="product-card">
+                            <img src="../imgs/chadora.jpg">
+                            <div class="category">
+                                <span>生菓子</span>
+                                <span>焼き物</span>
+                            </div>
+                            <h3>加賀棒茶どら</h3>
+                            <p class="reco-exp main-text">金沢名産の加賀棒茶を生地に練り込み、<br>
+                                香ばしさを楽しめるどら焼きに仕上げました。<br>
+                                甘さ控えめで、男性にも人気の一品です。
+                            </p>
+                            <p class="price"><span>¥</span>320<span>（税込み）</span></p>
+                            <div class="cart-input">
+                                <span>数量：</span>
+                                <input type="number" min="1" max="99" placeholder="-">
+                                <button>カートへ入れる</button>
+                            </div>
+                        </div>
+                        <div  class="product-card">
+                            <img src="../imgs/kinakomochi.jpg">
+                            <div class="category">
+                                <span>生菓子</span>
+                                <span>餅物</span>
+                            </div>
+                            <h3>きなこ餅</h3>
+                            <p class="reco-exp main-text">やわらかな餅生地に上品な粒あんを包み、香ばしいきな粉をたっぷりとまぶしました。<br>
+                                口に入れた瞬間に広がるきな粉の香りと、やさしい甘さがどこか懐かしい味わいです。
+                            </p>
+                            <p class="price"><span>¥</span>300<span>（税込み）</span></p>
+                            <div class="cart-input">
+                                <span>数量：</span>
+                                <input type="number" min="1" max="99" placeholder="-">
+                                <button>カートへ入れる</button>
+                            </div>
+                        </div>
+                        <div  class="product-card">
+                            <img src="../imgs/monaka.png">
+                            <div class="category">
+                                <span>半生菓子</span>
+                                <span>おか物</span>
+                            </div>
+                            <h3>最中</h3>
+                            <p class="reco-exp main-text">香ばしく焼き上げた最中皮に、<br>
+                                なめらかなこし餡を合わせました。<br>
+                                甘さを控えた上品な味わいで、<br>
+                                お茶請けや手土産に選ばれる一品です。
+                            </p>
+                            <p class="price"><span>¥</span>260<span>（税込み）</span></p>
+                            <div class="cart-input">
+                                <span>数量：</span>
+                                <input type="number" min="1" max="99" placeholder="-">
+                                <button>カートへ入れる</button>
+                            </div>
+                        </div>
+                        <div  class="product-card">
+                            <img src="../imgs/youkan.jpg">
+                            <div class="category">
+                                <span>生菓子</span>
+                                <span>流し物</span>
+                            </div>
+                            <h3>羊かん</h3>
+                            <p class="reco-exp main-text">北海道産小豆をじっくり炊き上げ、<br>
+                                なめらかな口あたりに仕立てました。<br>
+                                すっきりとした甘さと、<br>
+                                重すぎない後味が特徴です。
+                            </p>
+                            <p class="price"><span>¥</span>1,600<span>（税込み）</span></p>
+                            <div class="cart-input">
+                                <span>数量：</span>
+                                <input type="number" min="1" max="99" placeholder="-">
+                                <button>カートへ入れる</button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </section>
+            <section id="assorted">
+                <h3>詰め合わせ商品</h3>
+                <div id="assorted__accordion">
+                    <ul>
+                        <li>
+                            <details class="assorted__items-card" open>
+                                <summary class="assorted__title">ビジネス向け（取引先・ご挨拶）</summary>
+                                <div class="assorted__contents">
+                                    <div class="assorted__item-title"><h4>手土産詰め合わせ「東山」</h4></div>
+                                    <div class="assorted__item-exp">
+                                        <p>日持ちが良く、上品さを重視した組み合わせで、<br>
+                                        取引先の手土産として、非常におすすめの一品です。</p>
+                                    </div>
+                                    <div class="assorted__mer">
+                                        <div class="assorted__mer-img">
+                                            <img src="./imgs/Toyama.png">
+                                        </div>
+                                        <div class="assorted__mer-det">
+                                            <div class="assorted__mer-contents">
+                                                <div>詰め合わせ内容</div>
+                                                <ul class="set-list">
+                                                    <li>◇ 最中（粒あん・こしあん）<span class="quantity">三個</span></li>
+                                                    <li>◇ 小羊羹（抹茶・小豆）<span class="quantity">二個</span></li>
+                                                    <li>◇ 加賀棒茶どら焼き<span class="quantity">二個</span></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <p class="price"><span>¥</span>2,980<span>（税込み）</span></p>
+                                        <div class="cart-input">
+                                            <span>数量：</span>
+                                            <input type="number" min="1" max="99" placeholder="-">
+                                            <button>カートへ入れる</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </details>
+                        </li>
+                        <li>
+                            <details class="assorted__items-card" open>
+                                <summary class="assorted__title">帰省の手土産（家族・親戚）</summary>
+                                <div class="assorted__contents">
+                                    <div class="assorted__item-title"><h4>団らん詰め合わせ「加賀の集い」</h4></div>
+                                    <div class="assorted__item-exp">
+                                        <p>食べやすく、分けやすい。<br>
+                                        甘さはやや親しみ寄りの商品をセレクトさせていただきました。<br>
+                                        ご家族や親戚への団らんのお供に。</p>
+                                    </div>
+                                    <div class="assorted__mer">
+                                        <div class="assorted__mer-img">
+                                            <img src="./imgs/Kaganotudoi.png">
+                                        </div>
+                                        <div class="assorted__mer-det">
+                                            <div class="assorted__mer-contents">
+                                                <div>詰め合わせ内容</div>
+                                                <ul class="set-list">
+                                                    <li>◇ 最中（粒あん・こしあん）<span class="quantity">二個</span></li>
+                                                    <li>◇ どら焼き<span class="quantity">二個</span></li>
+                                                    <li>◇ きなこ餅（四ヶ入）<span class="quantity">二個</span></li>
+                                                    <li>◇ 季節の焼き菓子<span class="quantity">四個</span></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <p class="price"><span>¥</span>3,300<span>（税込み）</span></p>
+                                        <div class="cart-input">
+                                            <span>数量：</span>
+                                            <input type="number" min="1" max="99" placeholder="-">
+                                            <button>カートへ入れる</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </details>
+                        </li>
+                        <li>
+                            <details class="assorted__items-card" open>
+                                <summary class="assorted__title">季節のご挨拶（お中元・お歳暮）</summary>
+                                <div class="assorted__contents">
+                                    <div class="assorted__item-title"><h4>季節菓撰「四季の彩」</h4></div>
+                                    <div class="assorted__item-exp">
+                                        <p>見た目の美しさを重視し、“季節感”を表現致しました。<br>
+                                        お中元には水羊かんを、お歳暮には栗羊かんを詰め合わせました。</p>
+                                    </div>
+                                    <div class="assorted__mer">
+                                        <div class="assorted__mer-img">
+                                            <img src="./imgs/Toyama.png">
+                                        </div>
+                                        <div class="assorted__mer-det">
+                                            <div class="assorted__mer-contents">
+                                                <div>詰め合わせ内容</div>
+                                                <ul class="set-list">
+                                                    <li>◇ 上生菓子（季節意匠）<span class="quantity">四個</span></li>
+                                                    <li>◇ 抹茶菓子（六粒入）<span class="quantity">一個</span></li>
+                                                    <li>◇ 加賀棒茶どら焼き<span class="quantity">一個</span></li>
+                                                    <li>◇ 水羊かん（夏） or<br>　栗羊かん（秋冬）<span class="quantity">二個</span></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <p class="price"><span>¥</span>3,700<span>（税込み）</span></p>
+                                        <div class="cart-input">
+                                            <span>数量：</span>
+                                            <input type="number" min="1" max="99" placeholder="-">
+                                            <button>カートへ入れる</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </details>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <div id="imgs-contents">
+                <a href="./index.html"><img src="./imgs/logo_footer.png"></a>
+                <div id="icons">
+                    <img src="./imgs/icon-line.svg">
+                    <img src="./imgs/icon-facebook.svg">
+                    <img src="./imgs/icon-x.svg">
+                    <img src="./imgs/icon-Instagram.svg">
+                </div>
+            </div>
+            <div id="footer-shop-info">
+                <p>〒920-0831<br>
+                    石川県金沢市東山1丁目12-8<br>
+                    電話番号：XXX-XXX-XXXX<br>
+                    営業時間：9:30〜18:00<br>
+                    定休日：毎週水曜日（祝日の場合は翌日振替）
+                </p>
+            </div>
+            <div id="footer-nav">
+                <nav>
+                    <ul>
+                        <li>
+                            <a href="./index.html">トップへ</a>
+                        </li>
+                        <li>
+                            <a href="#">お知らせ</a>
+                        </li>
+                        <li><a href="#">今月のおすすめ</a></li>
+                        <li>
+                            <a href="./index.html#gift">贈りもの</a>
+                            <ul class="footer-mini-nav">
+                                <li>
+                                    <a href="./gift.html">贈りものについて</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="./index.html#thought">甘彩堂の想い</a>
+                            <ul class="footer-mini-nav">
+                                <li>
+                                    <a href="./thoughts.html">甘彩堂の想いについて</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li><a href="#">特典・特集</a></li>
+                        <li>
+                            <a href="#">商品</a>
+                            <ul class="footer-mini-nav">
+                                <li>
+                                    <a href="#">商品一覧へ</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li><a href="#">店舗情報</a></li>
+                        <li><a href="#">カートへ</a></li>
+                        <li><a href="#">マイページへ</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div id="footer-small">
+                <small>© 2025 Kansai-dou. All Rights Reserved.</small>                
+            </div>
+        </footer>
+    </body>
+</html>
