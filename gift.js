@@ -14,5 +14,5 @@ document.addEventListener('DOMContentLoaded', () => {
         })
     },option);
 
-    document.querySelectorAll('.move_upwards , .blur , .active').forEach(el => observer.observe(el));
+    document.querySelectorAll('.card-move, .move_upwards, .blur, .active').forEach(el => observer.observe(el));
 })

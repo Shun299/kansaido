@@ -189,6 +189,9 @@ header nav a {
 
 main {
     margin: calc(var(--space-6xl) * 2) 0 calc(var(--space-6xl) * 3);
+    display: grid;
+    grid-template-rows: repeat(4, max-content);
+    gap: var(--space-6xl);
 }
 
 .headline {
@@ -198,29 +201,88 @@ main {
     font-weight: normal;
     letter-spacing: var(--space-sm);
     text-align: center;
-    margin-bottom: var(--space-6xl);
 }
 
 #selections {
     display: flex;
     justify-content: center;
-    gap: calc(var(--space-6xl) * 2);
+    gap: calc(var(--space-6xl) * 1.5);
 }
 
 .selections__card {
     text-align: center;
 }
 
-.selections__card h3 {
+.h3-title {
     font-family: var(--font-yuji);
     font-weight: normal;
     font-size: var(--font-size-xl);
-    margin-bottom: var(--space-md);
+    margin-bottom: var(--space-lg);
+    color: var(--text-color);
+    letter-spacing: 2px;
+}
+
+main > section {
+    padding: var(--space-6xl);
+}
+
+#individual-items .h3-title {
+    text-align: center;
+}
+
+#search summary {
+    text-align: center;
+    font-weight: normal;
+    font-family: var(--font-jp-M);
+    font-size: var(--font-size-md);
+    padding: 0 var(--space-md);
+    margin-bottom: var(--space-xl);
+    cursor: pointer;
+}
+
+#search summary {
+    list-style: none;
+}
+
+#search__checkboxes {
+    display: flex;
+    justify-content: center;
+    gap: var(--space-3xl);
+}
+
+#search__content {
+    border: solid 1px var(--text-color);
+    padding: var(--space-3xl) var(--space-3xl);
+    margin: 0 calc(var(--space-6xl) * 2) var(--space-6xl);
+}
+
+.checkbox__title {
+    text-align: center;
+    font-weight: normal;
+    font-family: var(--font-jp-M);
+    font-size: var(--font-size-md);
+}
+
+.checkbox__labels {
+    margin-top: var(--space-md);
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: var(--space-sm);
+}
+
+.checkbox__labels input {
+    margin-right: var(--space-sm);
+}
+
+.labels {
+    display: inline-block;
+    padding: 5px;
+    background-color: var(--accent-lightgreen);
+    cursor: pointer;
 }
 
 .selections__card a {
     text-decoration: none;
-    color: var(--text-color);
 }
 
 .product-card {

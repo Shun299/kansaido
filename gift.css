@@ -491,6 +491,18 @@ small {
 
 /* InterSectionObseverのcss */
 
+.card-move {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1.2s ease-out, transform 1.2s ease-out;
+    transition-delay: calc(var(--i) * 0.25s);
+}
+
+.card-move.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 .move_upwards {
     opacity: 0;
     transform: translateY(20px);
@@ -508,5 +520,5 @@ small {
 
 .blur.active {
     filter: blur(0px);
-    transition: filter 1.7s;
+    transition: filter 1.2s;
 }

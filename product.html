@@ -76,47 +76,49 @@
             <h2 class="headline">― 商品一覧 ―</h2>
             <section id="selections">
                 <div class="selections__card">
-                    <a href="#"><h3>単品商品へ</h3></a>
-                    <p>丁寧に仕立てたお菓子を、<br>気軽にお楽しみいただけます。</p>
+                    <a href="#individual-items"><h3 class="h3-title">単品商品へ</h3></a>
+                    <p class="main-text">丁寧に仕立てたお菓子を、<br>気軽にお楽しみいただけます。</p>
                 </div>
                 <div class="selections__card">
-                    <a href="#"><h3>詰め合わせ商品へ</h3></a>
-                    <p>贈り物やご挨拶に最適な、<br>季節のお菓子を詰め合わせました。</p>
+                    <a href="#assorted"><h3 class="h3-title">詰め合わせ商品へ</h3></a>
+                    <p class="main-text">贈り物やご挨拶に最適な、<br>季節のお菓子を詰め合わせました。</p>
                 </div>
             </section>
             <section id="individual-items">
-                <h3>単品商品</h3>
+                <h3 class="h3-title">単品商品</h3>
                 <seciton id="search">
-                    <div>
-                        <h4>種類で探す</h4>
-                        <div>
-                            <div>
-                                <span>菓子の種類</span>
-                                <div>
-                                    <input type="checkbox"><label>生菓子</label><br>
-                                    <input type="checkbox"><label>半生菓子</label><br>
-                                    <input type="checkbox"><label>干菓子</label><br>
+                    <details>
+                        <summary class="main-text">【 種類で探す 】</summary>
+                        <div id="search__content">
+                            <div id="search__checkboxes">
+                                <div class="checkbox">
+                                    <h5 class="checkbox__title">菓子の種類</h5>
+                                    <div class="checkbox__labels">
+                                        <label class="labels"><input type="checkbox">生菓子</label>
+                                        <label class="labels"><input type="checkbox">半生菓子</label>
+                                        <label class="labels"><input type="checkbox">干菓子</label>
+                                    </div>
+                                </div>
+                                <div class="checkbox">
+                                    <h5 class="checkbox__title">製法・お品の分類</h5>
+                                    <div class="checkbox__labels">
+                                        <label class="labels"><input type="checkbox">餅物</label>
+                                        <label class="labels"><input type="checkbox">蒸し物</label>
+                                        <label class="labels"><input type="checkbox">焼き物</label>
+                                        <label class="labels"><input type="checkbox">流し物</label>
+                                        <label class="labels"><input type="checkbox">煉り物</label>
+                                        <label class="labels"><input type="checkbox">揚げ物</label>
+                                        <label class="labels"><input type="checkbox">あん物</label>
+                                        <label class="labels"><input type="checkbox">おか物</label>
+                                        <label class="labels"><input type="checkbox">打ち物</label>
+                                        <label class="labels"><input type="checkbox">押し物</label>
+                                        <label class="labels"><input type="checkbox">掛け物</label>
+                                        <label class="labels"><input type="checkbox">あめ物</label>
+                                    </div>
                                 </div>
                             </div>
-                            <div>
-                                <span>製法・お品の分類</span>
-                                <div>
-                                    <input type="checkbox"><label>餅物</label><br>
-                                    <input type="checkbox"><label>蒸し物</label><br>
-                                    <input type="checkbox"><label>焼き物</label><br>
-                                    <input type="checkbox"><label>流し物</label><br>
-                                    <input type="checkbox"><label>煉り物</label><br>
-                                    <input type="checkbox"><label>揚げ物</label><br>
-                                    <input type="checkbox"><label>あん物</label><br>
-                                    <input type="checkbox"><label>おか物</label><br>
-                                    <input type="checkbox"><label>打ち物</label><br>
-                                    <input type="checkbox"><label>押し物</label><br>
-                                    <input type="checkbox"><label>掛け物</label><br>
-                                    <input type="checkbox"><label>あめ物</label><br>
-                                </div>  
-                            </div>
                         </div>
-                    </div>
+                    </details>
                 </seciton>
                 <section id="products">
                     <div id="product-container">
@@ -234,7 +236,7 @@
                 </section>
             </section>
             <section id="assorted">
-                <h3>詰め合わせ商品</h3>
+                <h3 class="h3-title">詰め合わせ商品</h3>
                 <div id="assorted__accordion">
                     <ul>
                         <li>
@@ -242,7 +244,7 @@
                                 <summary class="assorted__title">ビジネス向け（取引先・ご挨拶）</summary>
                                 <div class="assorted__contents">
                                     <div class="assorted__item-title"><h4>手土産詰め合わせ「東山」</h4></div>
-                                    <div class="assorted__item-exp">
+                                    <div class="assorted__item-exp main-text">
                                         <p>日持ちが良く、上品さを重視した組み合わせで、<br>
                                         取引先の手土産として、非常におすすめの一品です。</p>
                                     </div>
@@ -275,7 +277,7 @@
                                 <summary class="assorted__title">帰省の手土産（家族・親戚）</summary>
                                 <div class="assorted__contents">
                                     <div class="assorted__item-title"><h4>団らん詰め合わせ「加賀の集い」</h4></div>
-                                    <div class="assorted__item-exp">
+                                    <div class="assorted__item-exp main-text">
                                         <p>食べやすく、分けやすい。<br>
                                         甘さはやや親しみ寄りの商品をセレクトさせていただきました。<br>
                                         ご家族や親戚への団らんのお供に。</p>
@@ -310,7 +312,7 @@
                                 <summary class="assorted__title">季節のご挨拶（お中元・お歳暮）</summary>
                                 <div class="assorted__contents">
                                     <div class="assorted__item-title"><h4>季節菓撰「四季の彩」</h4></div>
-                                    <div class="assorted__item-exp">
+                                    <div class="assorted__item-exp main-text">
                                         <p>見た目の美しさを重視し、“季節感”を表現致しました。<br>
                                         お中元には水羊かんを、お歳暮には栗羊かんを詰め合わせました。</p>
                                     </div>
