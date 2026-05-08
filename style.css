@@ -840,7 +840,7 @@ small {
 
 .reco-card-move {
     opacity: 0;
-    transform: translateY(20px);
+    transform: translateY(15px);
     transition: opacity 1.2s ease-out, transform 1.2s ease-out;
     transition-delay: calc(var(--i) * 0.25s);
 }
