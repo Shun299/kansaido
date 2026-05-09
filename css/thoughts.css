@@ -21,7 +21,7 @@
 
 @font-face {
     font-family: 'YujiSyuku-Regular';
-    src: url('./fonts/YujiSyuku-Regular.ttf') format('truetype');
+    src: url('../fonts/YujiSyuku-Regular.ttf') format('truetype');
 }
 
 :root {
@@ -124,7 +124,7 @@ header nav a {
     position: relative;
     z-index: 10;
     border-bottom: .125rem solid transparent;
-    border-image: url(./imgs/price-underline.svg) 0 0 100% 0 stretch;
+    border-image: url(../imgs/price-underline.svg) 0 0 100% 0 stretch;
     padding-bottom: var(--space-xs);
     color: var(--text-color);
     transition: .3s;
@@ -222,7 +222,7 @@ main {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url(./imgs/kansaido_firstview.png);
+    background-image: url(../imgs/kansaido_firstview.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-color: rgba(0, 0, 0, 0.3);
@@ -308,7 +308,7 @@ main {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url(./imgs/higashi_chaya.webp);
+    background-image: url(../imgs/higashi_chaya.webp);
     background-repeat: no-repeat;
     background-size: cover;
     background-color: rgba(255, 255, 255, 0.5);
@@ -344,7 +344,7 @@ main {
     width: 250px;
     height: 250px;
     position: absolute;
-    background-image: url(./imgs/kansaido_icon_main.svg);
+    background-image: url(../imgs/kansaido_icon_main.svg);
     background-repeat: no-repeat;
     background-size: cover;
     top: 35%;

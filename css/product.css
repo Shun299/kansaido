@@ -21,7 +21,7 @@
 
 @font-face {
     font-family: 'YujiSyuku-Regular';
-    src: url('./fonts/YujiSyuku-Regular.ttf') format('truetype');
+    src: url('../fonts/YujiSyuku-Regular.ttf') format('truetype');
 }
 
 :root {
@@ -117,7 +117,7 @@ header nav a {
     position: relative;
     z-index: 10;
     border-bottom: .125rem solid transparent;
-    border-image: url(./imgs/price-underline.svg) 0 0 100% 0 stretch;
+    border-image: url(../imgs/price-underline.svg) 0 0 100% 0 stretch;
     padding-bottom: var(--space-xs);
     color: var(--text-color);
     transition: .3s;
@@ -251,6 +251,8 @@ main > section {
 }
 
 #search__content {
+    display: grid;
+    place-items: center;
     border: solid 1px var(--text-color);
     padding: var(--space-3xl) var(--space-3xl);
     margin: 0 calc(var(--space-6xl) * 2) var(--space-6xl);
@@ -337,7 +339,7 @@ main > section {
     width: fit-content;
     padding-bottom: .1rem;
     border-bottom: 2px solid transparent;
-    border-image: url(./imgs/price-underline.svg) 0 0 100% 0 stretch;
+    border-image: url(../imgs/price-underline.svg) 0 0 100% 0 stretch;
 }
 
 .reco-exp {
@@ -394,6 +396,10 @@ main > section {
 
 .cart-input button:active {
     transform: scale(95%);
+}
+
+.remove {
+    display: none;
 }
 
 footer {

@@ -4,19 +4,19 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>甘彩堂 | 甘彩堂の想いについて</title>
-        <link rel="icon" type="image/png" href="../imgs/kansaido_favicon2.png">
-        <link rel="stylesheet" href="product.css">
+        <link rel="icon" type="image/png" href="imgs/kansaido_favicon2.png">
+        <link rel="stylesheet" href="css/product.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200..900&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
         <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-        <script src="product.js"></script>
+        <script src="js/product.js"></script>
     </head>
     <body>
         <header>
-            <a href="./index.html" id="header-logo">
-                <img src="../imgs/kansaido_logo.svg">
+            <a href="index.html" id="header-logo">
+                <img src="imgs/kansaido_logo.svg">
             </a>
             <nav>
                 <ul id="nav-container">
@@ -27,20 +27,20 @@
                         <a href="#recommend">今月のおすすめ</a>
                     </li>
                     <li class="main-menu">
-                        <a href="./index.html#gift">贈りもの</a>
+                        <a href="index.html#gift">贈りもの</a>
                         <ul class="sub-menu">
                             <li>
-                                <img class="l-menu" src="../imgs/l-menu.svg">
-                                <a href="./gift.html">贈りものについて</a>
+                                <img class="l-menu" src="imgs/l-menu.svg">
+                                <a href="gift.html">贈りものについて</a>
                             </li>
                         </ul>
                     </li>
                     <li class="main-menu">
-                        <a href="./index.html#thought">甘彩堂の想い</a>
+                        <a href="index.html#thought">甘彩堂の想い</a>
                         <ul class="sub-menu">
                             <li>
-                                <img class="l-menu" src="../imgs/l-menu.svg">
-                                <a href="./thoughts.html">甘彩堂の想いについて</a>
+                                <img class="l-menu" src="imgs/l-menu.svg">
+                                <a href="thoughts.html">甘彩堂の想いについて</a>
                             </li>
                         </ul>
                     </li>
@@ -51,7 +51,7 @@
                         <a href="#product">商品</a>
                         <ul class="sub-menu">
                             <li>
-                                <img class="l-menu" src="../imgs/l-menu.svg">
+                                <img class="l-menu" src="imgs/l-menu.svg">
                                 <a href="#news">商品一覧へ</a>
                             </li>
                         </ul>
@@ -61,12 +61,12 @@
                     </li>
                     <li id="cart">
                         <a href="#">
-                            <img src="../imgs/cart_icon.svg">
+                            <img src="imgs/cart_icon.svg">
                         </a>
                     </li>
                     <li id="my-page">
                         <a href="#">
-                            <img src="../imgs/usericon.svg">
+                            <img src="imgs/usericon.svg">
                         </a>
                     </li>
                 </ul>
@@ -94,36 +94,39 @@
                                 <div class="checkbox">
                                     <h5 class="checkbox__title">菓子の種類</h5>
                                     <div class="checkbox__labels">
-                                        <label class="labels"><input type="checkbox">生菓子</label>
-                                        <label class="labels"><input type="checkbox">半生菓子</label>
-                                        <label class="labels"><input type="checkbox">干菓子</label>
+                                        <label class="labels"><input type="checkbox" value="生菓子" data-group="type">生菓子</label>
+                                        <label class="labels"><input type="checkbox" value="半生菓子" data-group="type">半生菓子</label>
+                                        <label class="labels"><input type="checkbox" value="干菓子" data-group="type">干菓子</label>
                                     </div>
                                 </div>
                                 <div class="checkbox">
                                     <h5 class="checkbox__title">製法・お品の分類</h5>
                                     <div class="checkbox__labels">
-                                        <label class="labels"><input type="checkbox">餅物</label>
-                                        <label class="labels"><input type="checkbox">蒸し物</label>
-                                        <label class="labels"><input type="checkbox">焼き物</label>
-                                        <label class="labels"><input type="checkbox">流し物</label>
-                                        <label class="labels"><input type="checkbox">煉り物</label>
-                                        <label class="labels"><input type="checkbox">揚げ物</label>
-                                        <label class="labels"><input type="checkbox">あん物</label>
-                                        <label class="labels"><input type="checkbox">おか物</label>
-                                        <label class="labels"><input type="checkbox">打ち物</label>
-                                        <label class="labels"><input type="checkbox">押し物</label>
-                                        <label class="labels"><input type="checkbox">掛け物</label>
-                                        <label class="labels"><input type="checkbox">あめ物</label>
+                                        <label class="labels"><input type="checkbox" value="餅物" data-group="method">餅物</label>
+                                        <label class="labels"><input type="checkbox" value="蒸し物" data-group="method">蒸し物</label>
+                                        <label class="labels"><input type="checkbox" value="焼き物" data-group="method">焼き物</label>
+                                        <label class="labels"><input type="checkbox" value="流し物" data-group="method">流し物</label>
+                                        <label class="labels"><input type="checkbox" value="煉り物" data-group="method">煉り物</label>
+                                        <label class="labels"><input type="checkbox" value="揚げ物" data-group="method">揚げ物</label>
+                                        <label class="labels"><input type="checkbox" value="あん物" data-group="method">あん物</label>
+                                        <label class="labels"><input type="checkbox" value="おか物" data-group="method">おか物</label>
+                                        <label class="labels"><input type="checkbox" value="打ち物" data-group="method">打ち物</label>
+                                        <label class="labels"><input type="checkbox" value="押し物" data-group="method">押し物</label>
+                                        <label class="labels"><input type="checkbox" value="掛け物" data-group="method">掛け物</label>
+                                        <label class="labels"><input type="checkbox" value="あめ物" data-group="method">あめ物</label>
                                     </div>
                                 </div>
+                            </div>
+                            <div id="filter-button-container">
+                                <button id="filter-button">絞り込み</button>
                             </div>
                         </div>
                     </details>
                 </seciton>
                 <section id="products">
                     <div id="product-container">
-                        <div class="product-card">
-                            <img src="../imgs/sakuramochi.jpg">
+                        <div class="product-card" data-type="生菓子" data-method="焼き物">
+                            <img src="imgs/sakuramochi.jpg">
                             <div class="category">
                                 <span>生菓子</span>
                                 <span>焼き物</span>
@@ -141,8 +144,8 @@
                                 <button>カートへ入れる</button>
                             </div>
                         </div>
-                        <div  class="product-card">
-                            <img src="../imgs/harugasumi.jpg">
+                        <div  class="product-card" data-type="生菓子" data-method="煉り物">
+                            <img src="imgs/harugasumi.jpg">
                             <div class="category">
                                 <span>生菓子</span>
                                 <span>煉り物</span>
@@ -159,8 +162,8 @@
                                 <button>カートへ入れる</button>
                             </div>
                         </div>
-                        <div  class="product-card">
-                            <img src="../imgs/chadora.jpg">
+                        <div  class="product-card" data-type="生菓子" data-method="焼き物">
+                            <img src="imgs/chadora.jpg">
                             <div class="category">
                                 <span>生菓子</span>
                                 <span>焼き物</span>
@@ -177,8 +180,8 @@
                                 <button>カートへ入れる</button>
                             </div>
                         </div>
-                        <div  class="product-card">
-                            <img src="../imgs/kinakomochi.jpg">
+                        <div  class="product-card" data-type="生菓子" data-method="餅物">
+                            <img src="imgs/kinakomochi.jpg">
                             <div class="category">
                                 <span>生菓子</span>
                                 <span>餅物</span>
@@ -194,8 +197,8 @@
                                 <button>カートへ入れる</button>
                             </div>
                         </div>
-                        <div  class="product-card">
-                            <img src="../imgs/monaka.png">
+                        <div  class="product-card" data-type="半生菓子" data-method="おか物">
+                            <img src="imgs/monaka.png">
                             <div class="category">
                                 <span>半生菓子</span>
                                 <span>おか物</span>
@@ -213,8 +216,8 @@
                                 <button>カートへ入れる</button>
                             </div>
                         </div>
-                        <div  class="product-card">
-                            <img src="../imgs/youkan.jpg">
+                        <div  class="product-card" data-type="生菓子" data-method="流し物">
+                            <img src="imgs/youkan.jpg">
                             <div class="category">
                                 <span>生菓子</span>
                                 <span>流し物</span>
@@ -250,7 +253,7 @@
                                     </div>
                                     <div class="assorted__mer">
                                         <div class="assorted__mer-img">
-                                            <img src="./imgs/Toyama.png">
+                                            <img src="imgs/Toyama.png">
                                         </div>
                                         <div class="assorted__mer-det">
                                             <div class="assorted__mer-contents">
@@ -284,7 +287,7 @@
                                     </div>
                                     <div class="assorted__mer">
                                         <div class="assorted__mer-img">
-                                            <img src="./imgs/Kaganotudoi.png">
+                                            <img src="imgs/Kaganotudoi.png">
                                         </div>
                                         <div class="assorted__mer-det">
                                             <div class="assorted__mer-contents">
@@ -318,7 +321,7 @@
                                     </div>
                                     <div class="assorted__mer">
                                         <div class="assorted__mer-img">
-                                            <img src="./imgs/Toyama.png">
+                                            <img src="imgs/Toyama.png">
                                         </div>
                                         <div class="assorted__mer-det">
                                             <div class="assorted__mer-contents">
@@ -347,12 +350,12 @@
         </main>
         <footer>
             <div id="imgs-contents">
-                <a href="./index.html"><img src="./imgs/logo_footer.png"></a>
+                <a href="index.html"><img src="imgs/logo_footer.png"></a>
                 <div id="icons">
-                    <img src="./imgs/icon-line.svg">
-                    <img src="./imgs/icon-facebook.svg">
-                    <img src="./imgs/icon-x.svg">
-                    <img src="./imgs/icon-Instagram.svg">
+                    <img src="imgs/icon-line.svg">
+                    <img src="imgs/icon-facebook.svg">
+                    <img src="imgs/icon-x.svg">
+                    <img src="imgs/icon-Instagram.svg">
                 </div>
             </div>
             <div id="footer-shop-info">
@@ -367,25 +370,25 @@
                 <nav>
                     <ul>
                         <li>
-                            <a href="./index.html">トップへ</a>
+                            <a href="index.html">トップへ</a>
                         </li>
                         <li>
                             <a href="#">お知らせ</a>
                         </li>
                         <li><a href="#">今月のおすすめ</a></li>
                         <li>
-                            <a href="./index.html#gift">贈りもの</a>
+                            <a href="index.html#gift">贈りもの</a>
                             <ul class="footer-mini-nav">
                                 <li>
-                                    <a href="./gift.html">贈りものについて</a>
+                                    <a href="gift.html">贈りものについて</a>
                                 </li>
                             </ul>
                         </li>
                         <li>
-                            <a href="./index.html#thought">甘彩堂の想い</a>
+                            <a href="index.html#thought">甘彩堂の想い</a>
                             <ul class="footer-mini-nav">
                                 <li>
-                                    <a href="./thoughts.html">甘彩堂の想いについて</a>
+                                    <a href="thoughts.html">甘彩堂の想いについて</a>
                                 </li>
                             </ul>
                         </li>
