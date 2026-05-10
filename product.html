@@ -52,7 +52,7 @@
                         <ul class="sub-menu">
                             <li>
                                 <img class="l-menu" src="imgs/l-menu.svg">
-                                <a href="#news">商品一覧へ</a>
+                                <a href="product.html">商品一覧へ</a>
                             </li>
                         </ul>
                     </li>
@@ -86,44 +86,46 @@
             </section>
             <section id="individual-items">
                 <h3 class="h3-title">単品商品</h3>
-                <seciton id="search">
-                    <details>
-                        <summary class="main-text">【 種類で探す 】</summary>
-                        <div id="search__content">
-                            <div id="search__checkboxes">
-                                <div class="checkbox">
-                                    <h5 class="checkbox__title">菓子の種類</h5>
-                                    <div class="checkbox__labels">
-                                        <label class="labels"><input type="checkbox" value="生菓子" data-group="type">生菓子</label>
-                                        <label class="labels"><input type="checkbox" value="半生菓子" data-group="type">半生菓子</label>
-                                        <label class="labels"><input type="checkbox" value="干菓子" data-group="type">干菓子</label>
-                                    </div>
-                                </div>
-                                <div class="checkbox">
-                                    <h5 class="checkbox__title">製法・お品の分類</h5>
-                                    <div class="checkbox__labels">
-                                        <label class="labels"><input type="checkbox" value="餅物" data-group="method">餅物</label>
-                                        <label class="labels"><input type="checkbox" value="蒸し物" data-group="method">蒸し物</label>
-                                        <label class="labels"><input type="checkbox" value="焼き物" data-group="method">焼き物</label>
-                                        <label class="labels"><input type="checkbox" value="流し物" data-group="method">流し物</label>
-                                        <label class="labels"><input type="checkbox" value="煉り物" data-group="method">煉り物</label>
-                                        <label class="labels"><input type="checkbox" value="揚げ物" data-group="method">揚げ物</label>
-                                        <label class="labels"><input type="checkbox" value="あん物" data-group="method">あん物</label>
-                                        <label class="labels"><input type="checkbox" value="おか物" data-group="method">おか物</label>
-                                        <label class="labels"><input type="checkbox" value="打ち物" data-group="method">打ち物</label>
-                                        <label class="labels"><input type="checkbox" value="押し物" data-group="method">押し物</label>
-                                        <label class="labels"><input type="checkbox" value="掛け物" data-group="method">掛け物</label>
-                                        <label class="labels"><input type="checkbox" value="あめ物" data-group="method">あめ物</label>
-                                    </div>
+                <section id="search">
+                    <div id="search__content" class="main-text">
+                        <h4 class="main-text">種類で探す</h4>
+                        <div id="search__checkboxes">
+                            <div class="checkbox">
+                                <h5 class="checkbox__title">菓子の種類</h5>
+                                <div class="checkbox__labels">
+                                    <label class="labels"><input type="checkbox" value="生菓子" data-group="type">生菓子</label>
+                                    <label class="labels"><input type="checkbox" value="半生菓子" data-group="type">半生菓子</label>
+                                    <label class="labels"><input type="checkbox" value="干菓子" data-group="type">干菓子</label>
                                 </div>
                             </div>
-                            <div id="filter-button-container">
-                                <button id="filter-button">絞り込み</button>
+                            <div class="checkbox">
+                                <h5 class="checkbox__title">製法・お品の分類</h5>
+                                <div class="checkbox__labels">
+                                    <label class="labels"><input type="checkbox" value="餅物" data-group="method">餅物</label>
+                                    <label class="labels"><input type="checkbox" value="蒸し物" data-group="method">蒸し物</label>
+                                    <label class="labels"><input type="checkbox" value="焼き物" data-group="method">焼き物</label>
+                                    <label class="labels"><input type="checkbox" value="流し物" data-group="method">流し物</label>
+                                    <label class="labels"><input type="checkbox" value="煉り物" data-group="method">煉り物</label>
+                                    <label class="labels"><input type="checkbox" value="揚げ物" data-group="method">揚げ物</label>
+                                    <label class="labels"><input type="checkbox" value="あん物" data-group="method">あん物</label>
+                                    <label class="labels"><input type="checkbox" value="おか物" data-group="method">おか物</label>
+                                    <label class="labels"><input type="checkbox" value="打ち物" data-group="method">打ち物</label>
+                                    <label class="labels"><input type="checkbox" value="押し物" data-group="method">押し物</label>
+                                    <label class="labels"><input type="checkbox" value="掛け物" data-group="method">掛け物</label>
+                                    <label class="labels"><input type="checkbox" value="あめ物" data-group="method">あめ物</label>
+                                </div>
                             </div>
                         </div>
-                    </details>
-                </seciton>
+                        <div id="filter-button-container">
+                            <button id="filter-button" class="main-text">絞り込み</button>
+                        </div>
+                    </div>
+                </section>
                 <section id="products">
+                    <p id="hit-count" class="main-text">
+                        <span id="hit-number">6 </span>
+                        件の商品が見つかりました
+                    </p>
                     <div id="product-container">
                         <div class="product-card" data-type="生菓子" data-method="焼き物">
                             <img src="imgs/sakuramochi.jpg">
@@ -243,8 +245,8 @@
                 <div id="assorted__accordion">
                     <ul>
                         <li>
-                            <details class="assorted__items-card" open>
-                                <summary class="assorted__title">ビジネス向け（取引先・ご挨拶）</summary>
+                            <div class="assorted__items-card">
+                                <span class="assorted__title">ビジネス向け（取引先・ご挨拶）</span>
                                 <div class="assorted__contents">
                                     <div class="assorted__item-title"><h4>手土産詰め合わせ「東山」</h4></div>
                                     <div class="assorted__item-exp main-text">
@@ -273,11 +275,11 @@
                                         </div>
                                     </div>
                                 </div>
-                            </details>
+                            </div>
                         </li>
                         <li>
-                            <details class="assorted__items-card" open>
-                                <summary class="assorted__title">帰省の手土産（家族・親戚）</summary>
+                            <div class="assorted__items-card">
+                                <span class="assorted__title">帰省の手土産（家族・親戚）</span>
                                 <div class="assorted__contents">
                                     <div class="assorted__item-title"><h4>団らん詰め合わせ「加賀の集い」</h4></div>
                                     <div class="assorted__item-exp main-text">
@@ -308,11 +310,11 @@
                                         </div>
                                     </div>
                                 </div>
-                            </details>
+                            </div>
                         </li>
                         <li>
-                            <details class="assorted__items-card" open>
-                                <summary class="assorted__title">季節のご挨拶（お中元・お歳暮）</summary>
+                            <div class="assorted__items-card">
+                                <span class="assorted__title">季節のご挨拶（お中元・お歳暮）</span>
                                 <div class="assorted__contents">
                                     <div class="assorted__item-title"><h4>季節菓撰「四季の彩」</h4></div>
                                     <div class="assorted__item-exp main-text">
@@ -342,7 +344,7 @@
                                         </div>
                                     </div>
                                 </div>
-                            </details>
+                            </div>
                         </li>
                     </ul>
                 </div>
