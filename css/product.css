@@ -41,7 +41,7 @@
     --space-xs: .25rem;
     --space-sm: .5rem;
     --space-md: 1rem;
-    --space-lg: 24px;
+    --space-lg: 1.5rem;
     --space-xl: 2rem;
     --space-2xl: 2.5rem;
     --space-3xl: 3rem;
@@ -215,6 +215,7 @@ main {
 }
 
 .h3-title {
+    text-align: center;
     font-family: var(--font-yuji);
     font-weight: normal;
     font-size: var(--font-size-xl);
@@ -227,8 +228,20 @@ main > section {
     padding: var(--space-6xl) auto;
 }
 
-#individual-items .h3-title {
+#individual-items .h3-title,#assorted .h3-title {
+    /* リンク飛び対策 */
+    margin-top: 6rem;
+}
+
+
+.selections__card .h3-title {
     text-align: center;
+    transition: transform .3s ease;
+    will-change: transform;
+}
+
+.selections__card .h3-title:hover {
+    transform: scale(105%);
 }
 
 #search h4 {
@@ -287,6 +300,12 @@ main > section {
     border: solid 1px var(--accent-lightgreen);
     border-radius: 3px;
     cursor: pointer;
+    transition: transform .2s;
+    will-change: transform;
+}
+
+.labels:hover {
+    transform: scale(110%);
 }
 
 #filter-button {
