@@ -343,11 +343,10 @@ main > section {
 
 #product-container {
     display: grid;
-    grid-template-columns: repeat(3, minmax(min-content, max-content));
+    grid-template-columns: repeat(3, 19rem);
     grid-template-rows: auto;
     justify-content: center;
-    column-gap: var(--space-5xl);
-    row-gap: var(--space-3xl);
+    gap: var(--space-3xl) var(--space-5xl);
 }
 
 .category {
