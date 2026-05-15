@@ -236,12 +236,12 @@ main > section {
 
 .selections__card .h3-title {
     text-align: center;
-    transition: transform .3s ease;
+    transition: transform .5s ease;
     will-change: transform;
 }
 
 .selections__card .h3-title:hover {
-    transform: scale(105%);
+    transform: scale(110%);
 }
 
 #search h4 {
@@ -383,8 +383,7 @@ main > section {
     margin: var(--space-sm) 0;
 }
 
-.reco-card h3 ,
-.product-card h3 {
+.product__name {
     font-family: var(--font-headline);
     font-weight: normal;
     font-size: var(--font-size-lg);
@@ -454,6 +453,41 @@ main > section {
 
 .remove {
     display: none;
+}
+
+#assorted__accordion {
+    margin: 6rem 6rem;
+}
+
+#assorted__accordion > ul {
+    list-style: none;
+    display: grid;
+    gap: var(--space-5xl);
+    justify-items: center;
+}
+
+#assorted__accordion li {
+    display: grid;
+}
+
+#assorted__accordion > ul > li {
+    width: min(100%, 1100px);
+}
+
+.assorted__title {
+    font-family: var(--font-jp-M);
+    font-size: var(--font-size-lg);
+}
+
+.assorted__contents {
+    display: grid;
+    place-items: center;
+    gap: 2rem;
+    margin: 5rem 5rem;
+}
+
+.assorted__item-title {
+    
 }
 
 .assorted__mer-img img{
