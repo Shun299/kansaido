@@ -15,4 +15,11 @@ document.addEventListener('DOMContentLoaded', () => {
     },option);
 
     document.querySelectorAll('.reco-card-move, .move_upwards, .right1, .left2, .blur , .active').forEach(el => observer.observe(el));
-})
+
+    window.addEventListener("load", ()=> {
+        const loading = document.querySelector("#loading");
+        setTimeout(() => {
+            loading.classList.add("is-hidden");
+        }, 800);
+    });
+});
