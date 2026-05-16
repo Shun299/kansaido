@@ -65,21 +65,23 @@ body {
 }
 
 .main-text {
-    font-family: var(--font-headline);
+    font-family: var(--font-yuji);
+    color: rgba(43, 43, 43, 0.88);
+    text-shadow: 0 1px 2px rgba(255, 255, 255, 0.5);
     font-size: var(--font-size-md);
     letter-spacing: 2px;
     line-height: 2;
 }
 
 #background .sentence {
-    font-family: var(--font-headline);
+    font-family: var(--font-yuji);
     font-size: var(--font-size-md);
     letter-spacing: 5px;
     line-height: 3;
 }
 
 .h3-font {
-    font-family: var(--font-yuji);
+    font-family: var(--font-headline);
     font-size: var(--font-size-lg);
     letter-spacing: 8px;
     line-height: 2;
@@ -237,11 +239,9 @@ main {
     writing-mode: vertical-rl;
     height: 100%;
     width: 100%;
-    color: #fff;
+    color: rgba(255, 255, 255, 0.88);
     padding: 5rem;
-    text-shadow:
-    0px 0px 7px rgb(0, 0, 0),
-    0px 0px 7px rgb(0, 0, 0);
+    text-shadow: 0 0 3px rgba(43, 43, 43, 1),0 0 3px rgba(43, 43, 43, 1),0 0 3px rgba(43, 43, 43, 1);
 }
 
 #background h3 {
@@ -270,7 +270,7 @@ main {
     object-fit: cover;
 }
 
-#arrow {
+/* #arrow {
     display: flex;
     margin-top: var(--space-md);
     justify-content: center;
@@ -279,7 +279,7 @@ main {
 
 #arrow img {
     width: 100px;
-}
+} */
 
 #arrow img:first-child {
     transform: scaleX(-1);
@@ -289,7 +289,7 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: var(--space-6xl);
+    gap: calc(var(--space-6xl) * 1.5);
 }
 
 #posture .contents .sentence {
@@ -324,9 +324,6 @@ main {
     width: 100%;
     color: var(--text-color);
     padding: 5rem;
-    text-shadow:
-    0px 0px 7px rgb(255, 255, 255),
-    0px 0px 7px rgb(255, 255, 255);
     text-align: center;
 }
 
@@ -359,6 +356,51 @@ main {
     display: grid;
     gap: var(--space-lg);
     z-index: 1;
+}
+
+.detail-box {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    place-items: center;
+}
+
+.detail {
+    display: grid;
+    place-items: center;
+    font-size: var(--font-size-lg);
+    background-image: url(../imgs/button.svg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    height: 4.6rem;
+    min-width: 18rem;
+    transition: 0.3s;
+}
+
+.detail-box a {
+    position: relative;
+    text-decoration: none;
+    color: var(--text-color);
+    font-family: var(--font-headline);
+    white-space: nowrap;
+    letter-spacing: 2px;
+}
+
+.detail-box img {
+    position: absolute;
+    height: var(--space-lg);
+    right: -2rem;
+    top: 50%;
+    transform: translateY(-50%) translateX(0);
+    transition: transform 0.3s ease;
+}
+
+.detail-box a:hover img {
+    transform: translateY(-50%) translateX(50%);
+}
+
+.detail-box a:hover .detail {
+    background-image: url(../imgs/button_hanten.svg);
+    color: var(--bg-color);
 }
 
 footer {
