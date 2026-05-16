@@ -100,8 +100,6 @@ header #header-logo img {
     margin: 0 .5rem;
 }
 
---i
-
 header #nav-container {
     display: flex;
     justify-content: end;
@@ -118,7 +116,7 @@ header nav a {
     position: relative;
     z-index: 10;
     border-bottom: 2px solid transparent;
-    border-image: url(./imgs/price-underline.svg) 0 0 100% 0 stretch;
+    border-image: url(../imgs/price-underline.svg) 0 0 100% 0 stretch;
     padding-bottom: var(--space-xs);
     color: var(--text-color);
     transition: .3s;
