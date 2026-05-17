@@ -98,6 +98,15 @@ body {
     gap: 1rem;
 }
 
+#loading__img {
+    filter: blur(5px);
+}
+
+#loading__img.is-blur {
+    filter: blur(0px);
+    transition: filter 1.2s;
+}
+
 #loading #loading__img img {
     width: 20rem;
 }
