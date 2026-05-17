@@ -16,10 +16,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
     document.querySelectorAll('.reco-card-move, .move_upwards, .right1, .left2, .blur , .active').forEach(el => observer.observe(el));
 
+    
+    
     window.addEventListener("load", ()=> {    
         const loading = document.querySelector("#loading");
         const loadingImg = document.querySelector("#loading__img");
-        loadingImg.classList.add("is-blur");
+        setTimeout(() => {
+            loadingImg.classList.add("is-blur");
+        },100);
         setTimeout(() => {
             loading.classList.add("is-hidden");
         }, 800);

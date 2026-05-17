@@ -100,7 +100,7 @@ body {
 
 #loading__img {
     filter: blur(5px);
-    transition: filter .8s ease;
+    transition: filter .7s ease;
 }
 
 #loading__img.is-blur {
