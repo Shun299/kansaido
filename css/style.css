@@ -1090,16 +1090,7 @@ footer {
     }
 
     .clouds {
-        width: 12rem;
-        opacity: .55;
-    }
-
-    .clouds.right1 {
-        right: -4rem;
-    }
-
-    .clouds.left2 {
-        left: -4rem;
+        display: none;
     }
 
     #reco-container,
@@ -1262,7 +1253,8 @@ footer {
     }
 
     header {
-        padding: var(--space-sm);
+        position: static;
+        padding: var(--space-xs) var(--space-sm);
     }
 
     header #header-logo img {
@@ -1271,9 +1263,9 @@ footer {
 
     header #nav-container {
         display: grid;
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: var(--space-sm);
-        font-size: .95rem;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: var(--space-xs);
+        font-size: .8rem;
         text-align: center;
     }
 
@@ -1380,7 +1372,7 @@ footer {
     }
 
     .clouds {
-        width: 8rem;
+        display: none;
     }
 
     #reco-container,
@@ -1493,8 +1485,20 @@ footer {
 
     footer #footer-nav ul {
         display: grid;
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: var(--space-sm) var(--space-md);
+        grid-template-columns: 1fr;
+        gap: var(--space-sm);
+        justify-items: center;
+        text-align: center;
+        padding: 0;
         list-style: none;
+    }
+
+    footer #footer-nav li {
+        width: 100%;
+    }
+
+    footer #footer-nav a {
+        display: inline-block;
+        padding: .25rem 0;
     }
 }
