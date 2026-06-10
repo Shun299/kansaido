@@ -1291,14 +1291,67 @@ footer {
         justify-self: center;
     }
 
-    .header__hamburger {
+    /* .header__hamburger {
         display: grid;
         cursor: pointer;
+    } */
+
+    .header__hamburger {
+        position: relative;
+        display: grid;
+        cursor: pointer;
+        width: 2.25rem;
+        height: 1.5rem;
     }
 
-    .header__hamburger img {
-        height: 2.25rem;
+    .hamburger-border {
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: 1.3px;
+        background-color: var(--text-color);
+        border-radius: 999px;
+        transition: transform .3s ease, opacity .3s ease, top .3s ease;
     }
+
+    .border__first {
+        top: 0;
+    }
+
+    .border__middle {
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .border__last {
+        bottom: 0;
+    }
+
+    .header__hamburger.clicked .border__first {
+        top: 50%;
+        transform: translateY(-50%) rotate(45deg);
+    }
+
+    .header__hamburger.clicked .border__middle {
+        opacity: 0;
+    }
+
+    .header__hamburger.clicked .border__last {
+        bottom: auto;
+        top: 50%;
+        transform: translateY(-50%) rotate(-45deg);
+    }
+
+    .hamburger-text__menu {
+        text-align: center;
+        letter-spacing: 1.5px;
+        font-family: var(--font-jp-M);
+        font-size: var(--font-size-sm);
+    }
+
+    /* .header__hamburger img {
+        height: 2.25rem;
+    } */
 
     .header__smartphone-nav {
         position: fixed;
