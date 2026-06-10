@@ -40,6 +40,7 @@ document.addEventListener("DOMContentLoaded", () => {
     smartphoneNavItems.forEach(item => {
         item.addEventListener("click", () => {
             headerSmartphoneNav.classList.remove("clicked");
+            headerHamburger.classList.remove("clicked")
         });
     });
 });

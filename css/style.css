@@ -1366,7 +1366,7 @@ footer {
         font-family: var(--font-headline);
         font-size: 1.25rem;
         background-color: var(--bg-color);
-        transition: opacity .5s ease;
+        transition: opacity .5s ease, visibility .5s ease;
     }
 
     .header__smartphone-nav.clicked {
