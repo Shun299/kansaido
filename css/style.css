@@ -65,6 +65,11 @@ body {
     overflow-x: hidden;
 }
 
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
 .main-text {
     font-family: var(--font-jp);
     font-size: var(--font-size-md);
@@ -1296,7 +1301,7 @@ footer {
     }
 
     .header__smartphone-nav {
-        position: absolute;
+        position: fixed;
         z-index: 999;
         width: 100%;
         height: 100%;

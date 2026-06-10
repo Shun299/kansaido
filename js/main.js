@@ -32,6 +32,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const headerSmartphoneNav = document.querySelector("#smartphone-nav");
 
     headerHamburger.addEventListener("click", () => {
-        headerHamburger.classList.toggle(".clicked");
+        headerSmartphoneNav.classList.toggle("clicked");
     });
 });
