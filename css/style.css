@@ -259,6 +259,10 @@ header nav a {
     border-bottom: none;
 }
 
+.header__hamburger {
+    display: none;
+}
+
 .fixed-banner {
     position: fixed;
     z-index: 200;
@@ -1252,21 +1256,21 @@ footer {
         line-height: 1.8;
     }
 
+    .header__nav {
+        display: none;
+    }
+
     header {
-        position: static;
         padding: var(--space-xs) var(--space-sm);
+        grid-template-columns: 1fr auto;
+    }
+
+    header #header-logo {
+        justify-content: left;
     }
 
     header #header-logo img {
         height: 2.75rem;
-    }
-
-    header #nav-container {
-        display: grid;
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-        gap: var(--space-xs);
-        font-size: .8rem;
-        text-align: center;
     }
 
     header #nav-container li {
@@ -1276,6 +1280,14 @@ footer {
     #cart,
     #my-page {
         justify-self: center;
+    }
+
+    .header__hamburger {
+        display: grid;
+    }
+
+    .header__hamburger img {
+        height: 2.25rem;
     }
 
     .fixed-banner {
@@ -1296,15 +1308,15 @@ footer {
     }
 
     #loading #loading__img img {
-        width: min(16rem, 72vw);
+        width: min(25rem, 72vw);
     }
 
     #first-view img {
-        min-height: 16rem;
+        min-height: 25rem;
     }
 
     #catch-copy {
-        top: 10rem;
+        top: 8rem;
         right: var(--space-md);
         gap: var(--space-sm);
     }
