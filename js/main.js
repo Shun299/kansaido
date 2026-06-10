@@ -27,4 +27,11 @@ document.addEventListener('DOMContentLoaded', () => {
             loading.classList.add("is-hidden");
         }, 800);
     });
+
+    const headerHamburger = document.querySelector("#hamburger_menu");
+    const headerSmartphoneNav = document.querySelector("#smartphone-nav");
+
+    headerHamburger.addEventListener("click", () => {
+        headerHamburger.classList.toggle(".clicked");
+    });
 });

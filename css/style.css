@@ -263,6 +263,10 @@ header nav a {
     display: none;
 }
 
+.header__smartphone-nav {
+    display: none;
+}
+
 .fixed-banner {
     position: fixed;
     z-index: 200;
@@ -1284,10 +1288,32 @@ footer {
 
     .header__hamburger {
         display: grid;
+        cursor: pointer;
     }
 
     .header__hamburger img {
         height: 2.25rem;
+    }
+
+    .header__smartphone-nav {
+        position: absolute;
+        z-index: 999;
+        width: 100%;
+        height: 100%;
+        padding: 2rem;
+        font-family: var(--font-headline);
+        font-size: var(--font-size-lg);
+        background-color: var(--bg-color);
+    }
+
+    .header__smartphone-nav ul {
+        list-style: none;
+        display: grid;
+        gap: .1rem;
+    }
+
+    .header__smartphone-nav.clicked {
+        display: grid;
     }
 
     .fixed-banner {
