@@ -1302,6 +1302,10 @@ footer {
 
     .header__smartphone-nav {
         position: fixed;
+        display: grid;
+        visibility: hidden;
+        pointer-events: none;
+        opacity: 0;
         z-index: 999;
         width: 100%;
         height: 100%;
@@ -1309,16 +1313,19 @@ footer {
         font-family: var(--font-headline);
         font-size: var(--font-size-lg);
         background-color: var(--bg-color);
+        transition: opacity .5s ease;
+    }
+
+    .header__smartphone-nav.clicked {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
     }
 
     .header__smartphone-nav ul {
         list-style: none;
         display: grid;
         gap: .1rem;
-    }
-
-    .header__smartphone-nav.clicked {
-        display: grid;
     }
 
     .fixed-banner {
