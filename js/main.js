@@ -29,16 +29,27 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     const headerHamburger = document.querySelector("#hamburger_menu");
+    const HamburgerImg = document.querySelector("#hamburger_menu img");
     const headerSmartphoneNav = document.querySelector("#smartphone-nav");
     const smartphoneNavItems = document.querySelectorAll("#smartphone-nav__items a");
 
     headerHamburger.addEventListener("click", () => {
         headerSmartphoneNav.classList.toggle("clicked");
+
+        if (headerSmartphoneNav.classList.contains("clicked")) {
+            HamburgerImg.src = "imgs/close_menu.svg";
+            HamburgerImg.alt = "閉じる";
+        } else {
+            HamburgerImg.src = "imgs/hamburger_menu.svg";
+            HamburgerImg.alt = "ハンバーガーメニュー";
+        }
     });
 
     smartphoneNavItems.forEach(item => {
         item.addEventListener("click", () => {
             headerSmartphoneNav.classList.remove("clicked");
+            HamburgerImg.src = "imgs/hamburger_menu.svg";
+            HamburgerImg.alt = "ハンバーガーメニュー";
         });
     });
 });
