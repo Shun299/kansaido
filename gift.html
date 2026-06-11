@@ -5,7 +5,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>甘彩堂 | 贈りものについて</title>
         <link rel="icon" type="image/png" href="imgs/kansaido_favicon2.png">
+        <link rel="stylesheet" href="css/style.css">
         <link rel="stylesheet" href="css/gift.css">
+        <script src="js/main.js"></script>
         <script src="js/gift.js"></script>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,10 +15,12 @@
     </head>
     <body>
         <header>
-            <a href="index.html#first-view" id="header-logo">
-                <img src="imgs/kansaido_logo.svg">
-            </a>
-            <nav>
+            <div class="header__logo">
+                <a href="index.html#first-view" id="header-logo">
+                    <img src="imgs/kansaido_logo.svg">
+                </a>
+            </div>
+            <nav class="header__nav">
                 <ul id="nav-container">
                     <li class="main-menu">
                         <a href="index.html#news">お知らせ</a>
@@ -69,12 +73,30 @@
                     </li>
                 </ul>
             </nav>
+            <div class="header__hamburger" id="hamburger_menu">
+                <span class="hamburger-border border__first"></span>
+                <span class="hamburger-border border__middle"></span>
+                <span class="hamburger-border border__last"></span>
+            </div>
         </header>
+        <nav class="header__smartphone-nav" id="smartphone-nav">
+            <ul id="smartphone-nav__items">
+                <li><a href="index.html#news">● お知らせ</a></li>
+                <li><a href="index.html#recommend">● 今月のおすすめ</a></li>
+                <li><a href="index.html#gift">● 贈りもの</a><ul><li><a href="gift.html">　〇 贈りものについて</a></li></ul></li>
+                <li><a href="index.html#thought">● 甘彩堂の想い</a><ul><li><a href="thoughts.html">　〇 甘彩堂の想いについて</a></li></ul></li>
+                <li><a href="index.html#campaign">● 特典・特集</a></li>
+                <li><a href="index.html#product">● 商品一覧</a><ul><li><a href="product.html">　〇 商品一覧へ</a></li></ul></li>
+                <li><a href="index.html#shop">● 店舗情報</a></li>
+                <li><a href="#">● カートへ</a></li>
+                <li><a href="#">● マイページへ</a></li>
+            </ul>
+        </nav>
         <main>
             <section id="gift">
                 <h2 class="headline">― 贈りものについて ―</h2>
                 <div id="message-container">
-                    <p id="message" class="blur">贈る場面に寄り添う、やさしい詰め合わせ。</p>
+                    <p id="message" class="blur main-message">贈る場面に寄り添う、やさしい詰め合わせ。</p>
                 </div>
                 <section id="packing" class="sections">
                     <div class="subheading">
@@ -82,8 +104,8 @@
                     </div>
                     <div class="el-compilation">
                         <div class="exp main-text">
-                            <p>甘彩堂では、大切な贈りものにふさわしいよう、<br>
-                                用途に合わせた丁寧な梱包をご用意しております。<br>
+                            <p>甘彩堂では、大切な贈りものにふさわしいよう、<br class="br-pc">
+                                用途に合わせた丁寧な梱包をご用意しております。<br class="br-pc">
                                 贈る相手やシーンに合わせてお選びいただけます。
                             </p>
                         </div>
@@ -93,8 +115,8 @@
                             </div>
                             <div class="packing-el-exp main-text">
                                 <span class="exp-title">紙袋</span>
-                                <p>贈り物としてお渡しいただけるよう、<br>
-                                    甘彩堂オリジナルの紙袋もご用意しております。<br>
+                                <p>贈り物としてお渡しいただけるよう、<br class="br-pc">
+                                    甘彩堂オリジナルの紙袋もご用意しております。<br class="br-pc">
                                     ご用途に合わせてお付けいたします。
                                 </p>
                             </div>
@@ -105,8 +127,8 @@
                             </div>
                             <div class="packing-el-exp main-text">
                                 <span class="exp-title">包装</span>
-                                <p>落ち着いた和の風合いを大切にした包装箱で、<br>
-                                    一つひとつ丁寧にお包みいたします。<br>
+                                <p>落ち着いた和の風合いを大切にした包装箱で、<br class="br-pc">
+                                    一つひとつ丁寧にお包みいたします。<br class="br-pc">
                                     贈答用としてそのままお渡しいただける仕上がりです。
                                 </p>
                             </div>
@@ -117,7 +139,7 @@
                             </div>
                             <div class="packing-el-exp main-text">
                                 <span class="exp-title">のし対応</span>
-                                <p>お祝い・お礼・ご挨拶など、<br>
+                                <p>お祝い・お礼・ご挨拶など、<br class="br-pc">
                                     用途に合わせたのし紙をご用意しております。<br>
                                     御歳暮、御中元、内祝い、御礼などがあります。<br>
                                     名入れにも対応しております。
@@ -130,9 +152,9 @@
                             </div>
                             <div class="packing-el-exp main-text">
                                 <span class="exp-title">メッセージカード</span>
-                                <p>ご希望の方には、<br>
-                                    無料メッセージカードをお付けすることが可能です。<br>
-                                    お祝いの言葉や感謝の気持ちなど、<br>
+                                <p>ご希望の方には、<br class="br-pc">
+                                    無料メッセージカードをお付けすることが可能です。<br class="br-pc">
+                                    お祝いの言葉や感謝の気持ちなど、<br class="br-pc">
                                     大切な想いを添えてお贈りいただけます。
                                 </p>
                             </div>
@@ -151,11 +173,11 @@
                     </div>
                     <div class="el-compilation">
                         <div class="exp main-text">
-                            <p>季節のご挨拶からお祝い、帰省の手土産まで、<br>
+                            <p>季節のご挨拶からお祝い、帰省の手土産まで、<br class="br-pc">
                                 様々な用途に合わせた詰め合わせをご用意しております。
                             </p>
-                            <p>お中元・お歳暮などの季節の贈りものをはじめ、<br>
-                                内祝いやお礼の品、取引先へのご挨拶など、<br>
+                            <p>お中元・お歳暮などの季節の贈りものをはじめ、<br class="br-pc">
+                                内祝いやお礼の品、取引先へのご挨拶など、<br class="br-pc">
                                 幅広い場面でご利用いただけます。
                             </p>
                             <p>贈る相手にふさわしい一箱をお選びください。
@@ -170,9 +192,9 @@
                                     </div>
                                     <div class="scene-el-sent main-text">
                                         <div class="sent-title">ご挨拶に相応しい手土産</div>
-                                        <p>日持ちが良く、<br>
-                                            上品さを重視した組み合わせで、<br>
-                                            取引先の手土産として、<br>
+                                        <p>日持ちが良く、<br class="br-pc">
+                                            上品さを重視した組み合わせで、<br class="br-pc">
+                                            取引先の手土産として、<br class="br-pc">
                                             非常におすすめの一品です。
                                         </p>
                                     </div>
@@ -203,9 +225,9 @@
                                     </div>
                                     <div class="scene-el-sent main-text">
                                         <div class="sent-title">親しみを込めた手土産を</div>
-                                        <p>食べやすく、分けやすい。<br>
-                                            甘さはやや親しみ寄りの商品を<br>
-                                            セレクトさせていただきました。<br>
+                                        <p>食べやすく、分けやすい。<br class="br-pc">
+                                            甘さはやや親しみ寄りの商品を<br class="br-pc">
+                                            セレクトさせていただきました。<br class="br-pc">
                                             ご家族や親戚への団らんのお供に。
                                         </p>
                                     </div>
@@ -237,10 +259,10 @@
                                     </div>
                                     <div class="scene-el-sent main-text">
                                         <div class="sent-title">季節感を重視した菓撰</div>
-                                        <p>見た目の美しさを重視し、<br>
-                                            “季節感”を表現致しました。<br>
-                                            お中元には水羊かんを、<br>
-                                            お歳暮には栗羊かんを、<br>
+                                        <p>見た目の美しさを重視し、<br class="br-pc">
+                                            “季節感”を表現致しました。<br class="br-pc">
+                                            お中元には水羊かんを、<br class="br-pc">
+                                            お歳暮には栗羊かんを、<br class="br-pc">
                                             詰め合わせました。
                                         </p>
                                     </div>
