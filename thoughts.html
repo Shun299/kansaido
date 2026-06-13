@@ -5,20 +5,24 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>甘彩堂 | 甘彩堂の想いについて</title>
         <link rel="icon" type="image/png" href="imgs/kansaido_favicon2.png">
+        <link rel="stylesheet" href="css/style.css">
         <link rel="stylesheet" href="css/thoughts.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200..900&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
         <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        <script src="js/main.js"></script>
         <script src="js/thoughts.js"></script>
     </head>
     <body>
         <header>
-            <a href="index.html" id="header-logo">
-                <img src="imgs/kansaido_logo.svg">
-            </a>
-            <nav>
+            <div class="header__logo">
+                <a href="index.html#first-view" id="header-logo">
+                    <img src="imgs/kansaido_logo.svg">
+                </a>
+            </div>
+            <nav class="header__nav">
                 <ul id="nav-container">
                     <li class="main-menu">
                         <a href="index.html#news">お知らせ</a>
@@ -71,7 +75,25 @@
                     </li>
                 </ul>
             </nav>
+            <div class="header__hamburger" id="hamburger_menu">
+                <span class="hamburger-border border__first"></span>
+                <span class="hamburger-border border__middle"></span>
+                <span class="hamburger-border border__last"></span>
+            </div>
         </header>
+        <nav class="header__smartphone-nav" id="smartphone-nav">
+            <ul id="smartphone-nav__items">
+                <li><a href="index.html#news">● お知らせ</a></li>
+                <li><a href="index.html#recommend">● 今月のおすすめ</a></li>
+                <li><a href="index.html#gift">● 贈りもの</a><ul><li><a href="gift.html">　〇 贈りものについて</a></li></ul></li>
+                <li><a href="index.html#thought">● 甘彩堂の想い</a><ul><li><a href="thoughts.html">　〇 甘彩堂の想いについて</a></li></ul></li>
+                <li><a href="index.html#campaign">● 特典・特集</a></li>
+                <li><a href="index.html#product">● 商品一覧</a><ul><li><a href="product.html">　〇 商品一覧へ</a></li></ul></li>
+                <li><a href="index.html#shop">● 店舗情報</a></li>
+                <li><a href="#">● カートへ</a></li>
+                <li><a href="#">● マイページへ</a></li>
+            </ul>
+        </nav>
         <main>
             <h2 class="headline">― 甘彩堂の<span>想い</span>について ―</h2>
             <section id="background">
