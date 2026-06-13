@@ -185,8 +185,71 @@ main {
 }
 
 @media (max-width: 640px) {
+
+    .headline {
+        font-size: 1.5rem;
+        letter-spacing: 3px;
+    }
+
+    main {
+        margin: calc(var(--space-6xl) * 2) auto;
+        gap: var(--space-6xl);
+    }
+
+    #background .contents {
+        writing-mode: horizontal-tb;
+        padding: var(--space-3xl) var(--space-md);
+    }
+
+    #background .sentence {
+        margin-right: 0;
+        gap: var(--space-lg);
+        letter-spacing: 2px;
+        line-height: 2;
+    }
+
+    #background h3 {
+        margin-bottom: var(--space-xl);
+    }
+
     #posture .contents {
         flex-direction: column;
         gap: 4rem;
+    }
+
+    #posture .contents > div:first-child {
+    width: min(100%, 400px);
+    min-width: 0;
+    }
+
+    #posture {
+        overflow-x: clip;
+    }
+
+    #posture .contents {
+        width: 100%;
+        min-width: 0;
+    }
+
+    #posture .contents > div:first-child {
+        width: min(100%, 400px);
+        max-width: calc(100vw - 2rem);
+        min-width: 0;
+        overflow-x: clip;
+    }
+
+    .swiper {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        aspect-ratio: 4 / 5;
+    }
+
+    #involvement .contents {
+        padding: 1rem;
+    }
+
+    #from-now::before {
+        left: 15%;
     }
 }
