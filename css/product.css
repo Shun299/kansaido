@@ -1,8 +1,7 @@
-.main-text {
+body {
+    background-color: var(--bg-color);
     font-family: var(--font-jp);
-    font-size: var(--font-size-md);
-    letter-spacing: 2px;
-    line-height: 2;
+    color: var(--text-color);
 }
 
 .h3-font {
@@ -25,10 +24,6 @@ section {
 }
 
 .headline {
-    font-family: var(--font-headline);
-    color: var(--accent-green);
-    font-size: var(--font-size-xl);
-    font-weight: normal;
     letter-spacing: var(--space-sm);
     text-align: center;
 }
@@ -139,7 +134,7 @@ main > section {
 
 #filter-button {
     padding: 7px 30px;
-    background-color: var(--cart-input);
+    background-color: #209F4B;
     color: #fff;
     font-family: "Noto Serif JP", serif;
     font-weight: normal;
@@ -161,24 +156,6 @@ main > section {
     text-decoration: none;
 }
 
-.product-card {
-    width: 19rem;
-}
-
-.product-card img {
-    width: 19rem;
-    height: 19rem;
-    object-fit: cover;
-}
-
-#product {
-    padding: 6.25rem var(--space-3xl);
-}
-
-#product h2 {
-    text-align: center;
-}
-
 #hit-count {
     text-align: center;
     margin-bottom: 3rem;
@@ -190,26 +167,8 @@ main > section {
 }
 
 #product-container {
-    display: grid;
     grid-template-columns: repeat(3, 19rem);
-    grid-template-rows: auto;
-    justify-content: center;
     gap: var(--space-3xl) var(--space-5xl);
-}
-
-.category {
-    display: flex;
-    gap: var(--space-sm);
-}
-
-.category span{
-    padding: var(--space-xs);
-    font-size: .9rem;
-    background-color: var(--accent-lightgreen);
-    letter-spacing: 2px;
-    font-family: var(--font-jp-M);
-    border-radius: 2px;
-    margin: var(--space-sm) 0;
 }
 
 .product__name {
@@ -222,62 +181,6 @@ main > section {
     padding-bottom: .1rem;
     border-bottom: 2px solid transparent;
     border-image: url(../imgs/price-underline.svg) 0 0 100% 0 stretch;
-}
-
-.reco-exp {
-    text-wrap: pretty;
-}
-
-.price {
-    margin-top: var(--space-md);
-    font-family: var(--font-jp-M);
-    letter-spacing: 2px;
-    font-size: 1.25rem;
-}
-
-.price span:nth-child(1) {
-    font-size: 1rem;
-}
-
-.price span:nth-child(2) {
-    font-size: .75rem;
-}
-
-.cart-input {
-    display: flex;
-    align-items: center;
-    margin: var(--space-md) 0;
-}
-
-.cart-input input {
-    width: var(--space-3xl);
-    height: var(--space-xl);
-    border: solid 1.5px var(--text-color);
-    padding-left: var(--space-sm);
-}
-
-.cart-input button {
-    cursor: pointer;
-    margin-left: var(--space-lg);
-    background-color: var(--cart-input);
-    color: var(--bg-color);
-    font-size: var(--font-size-md);
-    letter-spacing: 2px;
-    padding: var(--space-md) 1.25rem;
-    font-family: "Noto Serif JP", serif;
-    font-weight: 500;
-    border: none;
-    border-radius: 3px;
-    text-align: center;
-    transition: box-shadow 0.2s ease-out, transform 0.15s ease-out;
-}
-
-.cart-input button:hover {
-    box-shadow: 0px 0px 7px rgba(43,43,43,0.6);
-}
-
-.cart-input button:active {
-    transform: scale(95%);
 }
 
 .remove {
@@ -366,4 +269,36 @@ main > section {
 
 .quantity {
     align-content: end;
+}
+
+@media (max-width: 640px) {
+    #selections {
+        flex-direction: column;
+    }
+
+    #search__content {
+        margin: var(--space-6xl) 0rem;
+        padding: 2rem 1rem;
+    }
+
+    #search__checkboxes {
+        flex-direction: column;
+    }
+
+    #product-container {
+        grid-template-columns: 19rem;
+    }
+
+    #assorted__accordion {
+        margin: 6rem 1rem;
+    }
+
+    .assorted__contents {
+        margin: 5rem 0;
+    }
+
+    .assorted__mer {
+        flex-direction: column;
+        gap: 3rem;
+    }
 }
