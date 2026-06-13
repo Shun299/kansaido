@@ -92,7 +92,8 @@ section {
 }
 
 .scene-cont {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(2, 300px);
     gap: var(--space-5xl);
     justify-content: center;
 }
@@ -202,11 +203,19 @@ section {
         font-size: 15px;
     }
 
+    section {
+        padding: var(--space-5xl) 1rem;
+    }
+
+    .el-compilation {
+        padding: 0;
+    }
+
     .packing-el {
         grid-template-columns: 1fr;
     }
-
-    .br-pc {
-        display: none;
+    
+    .scene-cont {
+        grid-template-columns: 1fr;
     }
 }

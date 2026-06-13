@@ -1265,6 +1265,10 @@ footer {
         line-height: 1.8;
     }
 
+    .br-pc {
+        display: none;
+    }
+
     .header__nav {
         display: none;
     }
@@ -1473,7 +1477,7 @@ footer {
     }
 
     .detail-box img {
-        right: calc(50% - 9rem);
+        right: calc(50% - 10.5rem);
     }
 
     .clouds {
