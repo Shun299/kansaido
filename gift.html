@@ -15,11 +15,11 @@
     </head>
     <body>
         <header>
-            <div class="header__logo">
-                <a href="index.html#first-view" id="header-logo">
-                    <img src="imgs/kansaido_logo.svg" alt="甘彩堂のロゴ">
+            <h1 class="header__logo">
+                <a href="index.html" id="header-logo">
+                    <img src="imgs/kansaido_logo.svg" alt="甘彩堂">
                 </a>
-            </div>
+            </h1>
             <nav class="header__nav">
                 <ul id="nav-container">
                     <li class="main-menu">
@@ -63,21 +63,21 @@
                     </li>
                     <li id="cart">
                         <a href="#">
-                            <img src="imgs/cart_icon.svg" alt="カートのアイコン">
+                            <img src="imgs/cart_icon.svg" alt="カート">
                         </a>
                     </li>
                     <li id="my-page">
                         <a href="#">
-                            <img src="imgs/usericon.svg" alt="マイページのアイコン">
+                            <img src="imgs/usericon.svg" alt="マイページ">
                         </a>
                     </li>
                 </ul>
             </nav>
-            <div class="header__hamburger" id="hamburger_menu">
+            <button class="header__hamburger" id="hamburger_menu" aria-label="メニューを開く" aria-controls="smartphone-nav" aria-expanded="false">
                 <span class="hamburger-border border__first"></span>
                 <span class="hamburger-border border__middle"></span>
                 <span class="hamburger-border border__last"></span>
-            </div>
+            </button>
         </header>
         <nav class="header__smartphone-nav" id="smartphone-nav">
             <ul id="smartphone-nav__items">
@@ -111,7 +111,7 @@
                         </div>
                         <div class="packing-el move_upwards">
                             <div class="packing-el-img image">
-                                <img src="imgs/kansaido_kamibukuro.png">
+                                <img src="imgs/kansaido_kamibukuro.png" alt="甘彩堂オリジナルの紙袋">
                             </div>
                             <div class="packing-el-exp main-text">
                                 <span class="exp-title">紙袋</span>
@@ -123,7 +123,7 @@
                         </div>
                         <div class="packing-el move_upwards">
                             <div class="packing-el-img image">
-                                <img src="imgs/kansaido_package.png">
+                                <img src="imgs/kansaido_package.png" alt="甘彩堂の贈答用包装箱">
                             </div>
                             <div class="packing-el-exp main-text">
                                 <span class="exp-title">包装</span>
@@ -135,7 +135,7 @@
                         </div>
                         <div class="packing-el move_upwards">
                             <div class="packing-el-img image">
-                                <img src="imgs/kansaido_noshi.png">
+                                <img src="imgs/kansaido_noshi.png" alt="甘彩堂ののし紙">
                             </div>
                             <div class="packing-el-exp main-text">
                                 <span class="exp-title">のし対応</span>
@@ -148,7 +148,7 @@
                         </div>
                         <div class="packing-el move_upwards">
                             <div class="packing-el-img image">
-                                <img src="imgs/kansaido_message_card.png">
+                                <img src="imgs/kansaido_message_card.png" alt="「いつもありがとうございます」と書かれたメッセージカード">
                             </div>
                             <div class="packing-el-exp main-text">
                                 <span class="exp-title">メッセージカード</span>
@@ -162,7 +162,7 @@
                         <div class="detail-box">
                             <a href="product.html#assorted">
                                 <span class="detail">詰め合わせ商品一覧へ</span>
-                                <img src="imgs/arrow.svg">
+                                <img src="imgs/arrow.svg" alt="">
                             </a>
                         </div>
                     </div>
@@ -188,7 +188,7 @@
                             <div class="scene-cont">
                                 <div class="scene-cont-el card-move" style="--i: 0;">
                                     <div class="scene-el-img image">
-                                        <img src="imgs/kansaido_transaction.png">
+                                        <img src="imgs/kansaido_transaction.png" alt="取引先へ手土産を渡す様子">
                                     </div>
                                     <div class="scene-el-sent main-text">
                                         <div class="sent-title">ご挨拶に相応しい手土産</div>
@@ -201,7 +201,7 @@
                                 </div>
                                 <div class="scene-cont-el card-move" style="--i: 1;">
                                     <div class="scene-el-img image">
-                                        <img src="imgs/Toyama.png">
+                                        <img src="imgs/Toyama.png" alt="手土産詰め合わせ「東山」">
                                     </div>
                                     <div class="scene-el-sent main-text set-container">
                                         <div class="sent-title">手土産詰め合わせ「東山」</div>
@@ -221,7 +221,7 @@
                             <div class="scene-cont">
                                 <div class="scene-cont-el card-move" style="--i: 0;">
                                     <div class="scene-el-img image">
-                                        <img src="imgs/kansaido_relatives.png">
+                                        <img src="imgs/kansaido_relatives.png" alt="家族で贈答用の菓子箱を渡す様子">
                                     </div>
                                     <div class="scene-el-sent main-text">
                                         <div class="sent-title">親しみを込めた手土産を</div>
@@ -234,7 +234,7 @@
                                 </div>
                                 <div class="scene-cont-el card-move" style="--i: 1;">
                                     <div class="scene-el-img image">
-                                        <img src="imgs/Kaganotudoi.png">
+                                        <img src="imgs/Kaganotudoi.png" alt="団欒詰め合わせ「加賀の集い」">
                                     </div>
                                     <div class="scene-el-sent main-text set-container">
                                         <div class="sent-title">団欒詰め合わせ「加賀の集い」</div>
@@ -255,7 +255,7 @@
                             <div class="scene-cont">
                                 <div class="scene-cont-el card-move"  style="--i: 0;">
                                     <div class="scene-el-img image">
-                                        <img src="imgs/kansaido_season.png">
+                                        <img src="imgs/kansaido_season.png" alt="季節の贈りものを手渡す様子">
                                     </div>
                                     <div class="scene-el-sent main-text">
                                         <div class="sent-title">季節感を重視した菓撰</div>
@@ -269,7 +269,7 @@
                                 </div>
                                 <div class="scene-cont-el card-move" style="--i: 1;">
                                     <div class="scene-el-img image">
-                                        <img src="imgs/Kaganotudoi.png">
+                                        <img src="imgs/Kaganotudoi.png" alt="団欒詰め合わせ「加賀の集い」">
                                     </div>
                                     <div class="scene-el-sent main-text set-container">
                                         <div class="sent-title">季節菓撰「四季の彩」</div>
@@ -288,7 +288,7 @@
                         <div class="detail-box">
                             <a href="product.html#assorted">
                                 <span class="detail">詰め合わせ商品一覧へ</span>
-                                <img src="imgs/arrow.svg">
+                                <img src="imgs/arrow.svg" alt="">
                             </a>
                         </div>
                     </div>
@@ -327,7 +327,7 @@
                         <div class="detail-box">
                             <a href="#">
                                 <span class="detail">詰め合わせ商品一覧へ</span>
-                                <img src="imgs/arrow.svg">
+                                <img src="imgs/arrow.svg" alt="">
                             </a>
                         </div>
                     </div>
@@ -335,25 +335,28 @@
                 <div class="detail-box">
                     <a href="index.html">
                         <span class="detail">トップページに戻る</span>
-                        <img src="imgs/arrow.svg">
+                        <img src="imgs/arrow.svg" alt="">
                     </a>
                 </div>
             </section>
         </main>
         <footer>
             <div id="imgs-contents">
-                <a href="index.html"><img src="imgs/logo_footer.png"></a>
+                <a href="index.html"><img src="imgs/logo_footer.png" alt="甘彩堂"></a>
                 <div id="icons">
-                    <img src="imgs/icon-line.svg">
-                    <img src="imgs/icon-facebook.svg">
-                    <img src="imgs/icon-x.svg">
-                    <img src="imgs/icon-Instagram.svg">
+                    <img src="imgs/icon-line.svg" alt="line">
+                    <img src="imgs/icon-facebook.svg" alt="facebook">
+                    <img src="imgs/icon-x.svg" alt="x">
+                    <img src="imgs/icon-Instagram.svg" alt="Instagram">
                 </div>
             </div>
             <div id="footer-shop-info">
-                <p>〒920-0831<br>
-                    石川県金沢市東山1丁目12-8<br>
-                    電話番号：XXX-XXX-XXXX<br>
+                <p>
+                    <address>
+                        〒920-0831<br>
+                        石川県金沢市東山1丁目12-8<br>
+                        電話番号：<a href="tel:XXXXXXXXXX">XXX-XXX-XXXX</a>
+                    </address>
                     営業時間：9:30〜18:00<br>
                     定休日：毎週水曜日（祝日の場合は翌日振替）
                 </p>

@@ -17,11 +17,11 @@
     </head>
     <body>
         <header>
-            <div class="header__logo">
-                <a href="index.html#first-view" id="header-logo">
-                    <img src="imgs/kansaido_logo.svg" alt="甘彩堂のロゴ">
+            <h1 class="header__logo">
+                <a href="index.html" id="header-logo">
+                    <img src="imgs/kansaido_logo.svg" alt="甘彩堂">
                 </a>
-            </div>
+            </h1>
             <nav class="header__nav">
                 <ul id="nav-container">
                     <li class="main-menu">
@@ -65,21 +65,21 @@
                     </li>
                     <li id="cart">
                         <a href="#">
-                            <img src="imgs/cart_icon.svg" alt="カートのアイコン">
+                            <img src="imgs/cart_icon.svg" alt="カート">
                         </a>
                     </li>
                     <li id="my-page">
                         <a href="#">
-                            <img src="imgs/usericon.svg" alt="マイページのアイコン">
+                            <img src="imgs/usericon.svg" alt="マイページ">
                         </a>
                     </li>
                 </ul>
             </nav>
-            <div class="header__hamburger" id="hamburger_menu">
+            <button class="header__hamburger" id="hamburger_menu" aria-label="メニューを開く" aria-controls="smartphone-nav" aria-expanded="false">
                 <span class="hamburger-border border__first"></span>
                 <span class="hamburger-border border__middle"></span>
                 <span class="hamburger-border border__last"></span>
-            </div>
+            </button>
         </header>
         <nav class="header__smartphone-nav" id="smartphone-nav">
             <ul id="smartphone-nav__items">
@@ -380,18 +380,21 @@
         </main>
         <footer>
             <div id="imgs-contents">
-                <a href="index.html"><img src="imgs/logo_footer.png"></a>
+                <a href="index.html"><img src="imgs/logo_footer.png" alt="甘彩堂"></a>
                 <div id="icons">
-                    <img src="imgs/icon-line.svg">
-                    <img src="imgs/icon-facebook.svg">
-                    <img src="imgs/icon-x.svg">
-                    <img src="imgs/icon-Instagram.svg">
+                    <img src="imgs/icon-line.svg" alt="line">
+                    <img src="imgs/icon-facebook.svg" alt="facebook">
+                    <img src="imgs/icon-x.svg" alt="x">
+                    <img src="imgs/icon-Instagram.svg" alt="Instagram">
                 </div>
             </div>
             <div id="footer-shop-info">
-                <p>〒920-0831<br>
-                    石川県金沢市東山1丁目12-8<br>
-                    電話番号：XXX-XXX-XXXX<br>
+                <p>
+                    <address>
+                        〒920-0831<br>
+                        石川県金沢市東山1丁目12-8<br>
+                        電話番号：<a href="tel:XXXXXXXXXX">XXX-XXX-XXXX</a>
+                    </address>
                     営業時間：9:30〜18:00<br>
                     定休日：毎週水曜日（祝日の場合は翌日振替）
                 </p>

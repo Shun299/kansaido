@@ -15,7 +15,7 @@
         <div id="loading">
             <div id="loading__contents">
                 <div id="loading__img">
-                    <img src="./imgs/kansaido_icon_touka.png" alt="">
+                    <img src="./imgs/kansaido_icon_touka.png" alt="甘彩堂">
                 </div>
                 <!-- <div id="loading__p">
                     <p class="loading__text">Loading<span class="loading__dots"></span></p>
@@ -23,11 +23,11 @@
             </div>
         </div>
         <header>
-            <div class="header__logo">
-                <a href="index.html#first-view" id="header-logo">
-                    <img src="imgs/kansaido_logo.svg" alt="甘彩堂のロゴ">
+            <h1 class="header__logo">
+                <a href="index.html" id="header-logo">
+                    <img src="imgs/kansaido_logo.svg" alt="甘彩堂">
                 </a>
-            </div>
+            </h1>
             <nav class="header__nav">
                 <ul id="nav-container">
                     <li class="main-menu">
@@ -71,21 +71,21 @@
                     </li>
                     <li id="cart">
                         <a href="#">
-                            <img src="imgs/cart_icon.svg" alt="カートのアイコン">
+                            <img src="imgs/cart_icon.svg" alt="カート">
                         </a>
                     </li>
                     <li id="my-page">
                         <a href="#">
-                            <img src="imgs/usericon.svg" alt="マイページのアイコン">
+                            <img src="imgs/usericon.svg" alt="マイページ">
                         </a>
                     </li>
                 </ul>
             </nav>
-            <div class="header__hamburger" id="hamburger_menu">
+            <button class="header__hamburger" id="hamburger_menu" aria-label="メニューを開く" aria-controls="smartphone-nav" aria-expanded="false">
                 <span class="hamburger-border border__first"></span>
                 <span class="hamburger-border border__middle"></span>
                 <span class="hamburger-border border__last"></span>
-            </div>
+            </button>
         </header>
         <nav class="header__smartphone-nav" id="smartphone-nav">
             <ul id="smartphone-nav__items">
@@ -101,13 +101,12 @@
             </ul>
         </nav>
         <main>
-            <a href="#">
-                <div class="fixed-banner">
-                    <span><img src="imgs/icon-line.svg"></span>友達追加はこちら
-                </div>
+            <a class="fixed-banner" href="#">
+                <img src="imgs/icon-line.svg" alt="line">
+                友達追加はこちら
             </a>
             <div id="first-view">
-                <img src="imgs/kansaido_firstview.png" alt="ファーストビューの画像">
+                <img src="imgs/kansaido_firstview.png" alt="甘彩堂の外装">
             </div>
             <div id="catch-copy" class="blur">
                 <span>季節を包む和菓子を。</span>
@@ -183,13 +182,13 @@
                 </div>
             </section>
             <section id="recommend">
-                <img class="clouds right1 none-event" src="imgs/wagumo.png">
-                <img class="clouds left2 none-event" src="imgs/wagumo2.png">
+                <img class="clouds right1 none-event" src="imgs/wagumo.png" alt="">
+                <img class="clouds left2 none-event" src="imgs/wagumo2.png" alt="">
                     <h2 class="headline">― ３月のおすすめ ―</h2>
                 <div>
                     <div id="reco-container">
                         <div class="reco-card reco-card-move" style="--i: 0;">
-                            <img src="imgs/sakuramochi.jpg" alt="桜餅の画像">
+                            <img src="imgs/sakuramochi.jpg" alt="桜餅">
                             <div class="category">
                                 <span>生菓子</span>
                                 <span>焼き物</span>
@@ -208,7 +207,7 @@
                             </div>
                         </div>
                         <div class="reco-card reco-card-move" style="--i: 1;">
-                            <img src="imgs/harugasumi.jpg" alt="春霞の画像">
+                            <img src="imgs/harugasumi.jpg" alt="春霞">
                             <div class="category">
                                 <span>生菓子</span>
                                 <span>煉り物</span>
@@ -226,7 +225,7 @@
                             </div>
                         </div>
                         <div class="reco-card reco-card-move" style="--i: 2;">
-                            <img src="imgs/chadora.jpg" alt="加賀棒茶どらの画像">
+                            <img src="imgs/chadora.jpg" alt="加賀棒茶どら">
                             <div class="category">
                                 <span>生菓子</span>
                                 <span>焼き物</span>
@@ -289,7 +288,7 @@
                 <div class="detail-box">
                     <a href="gift.html">
                         <span class="detail">贈りものについて</span>
-                        <img src="imgs/arrow.svg">
+                        <img src="imgs/arrow.svg" alt="">
                     </a>
                 </div>
             </section>
@@ -305,7 +304,7 @@
                     <div class="detail-box">
                         <a href="thoughts.html">
                             <span class="detail">詳しくはこちら</span>
-                            <img src="imgs/arrow.svg">
+                            <img src="imgs/arrow.svg" alt="">
                         </a>
                     </div>
                 </div>
@@ -314,10 +313,10 @@
                 <h2 class="headline">― 特典・特集 ―</h2>
                 <div id="cam-banner-contents">
                     <div class="cam-banner reco-card-move" style="--i: 0;">
-                        <img src="imgs/line_banner.jpg" alt="友達追加のバナー">
+                        <img src="imgs/line_banner.jpg" alt="友達追加">
                     </div>
                     <div class="cam-banner reco-card-move" style="--i: 1;">
-                        <img src="imgs/delivery_banner.jpg" alt="税込7000円以上の購入で送料無料のバナー">
+                        <img src="imgs/delivery_banner.jpg" alt="税込7000円以上の購入で送料無料">
                     </div>
                 </div>
             </section>
@@ -325,7 +324,7 @@
                 <h2 class="headline">― 商品一覧 ―</h2>
                 <div id="product-container">
                     <div class="product-card">
-                        <img src="imgs/sakuramochi.jpg" alt="桜餅の画像">
+                        <img src="imgs/sakuramochi.jpg" alt="桜餅">
                         <div class="category">
                             <span>生菓子</span>
                             <span>焼き物</span>
@@ -344,7 +343,7 @@
                         </div>
                     </div>
                     <div  class="product-card">
-                        <img src="imgs/harugasumi.jpg" alt="春霞の画像">
+                        <img src="imgs/harugasumi.jpg" alt="春霞">
                         <div class="category">
                             <span>生菓子</span>
                             <span>煉り物</span>
@@ -362,7 +361,7 @@
                         </div>
                     </div>
                     <div  class="product-card">
-                        <img src="imgs/chadora.jpg" alt="加賀棒茶どらの画像">
+                        <img src="imgs/chadora.jpg" alt="加賀棒茶どら">
                         <div class="category">
                             <span>生菓子</span>
                             <span>焼き物</span>
@@ -380,7 +379,7 @@
                         </div>
                     </div>
                     <div  class="product-card">
-                        <img src="imgs/kinakomochi.jpg" alt="きなこ餅の画像">
+                        <img src="imgs/kinakomochi.jpg" alt="きなこ餅">
                         <div class="category">
                             <span>生菓子</span>
                             <span>餅物</span>
@@ -397,7 +396,7 @@
                         </div>
                     </div>
                     <div  class="product-card">
-                        <img src="imgs/monaka.png" alt="最中の画像">
+                        <img src="imgs/monaka.png" alt="最中">
                         <div class="category">
                             <span>半生菓子</span>
                             <span>おか物</span>
@@ -416,7 +415,7 @@
                         </div>
                     </div>
                     <div  class="product-card">
-                        <img src="imgs/youkan.jpg" alt="羊かんの画像">
+                        <img src="imgs/youkan.jpg" alt="羊かん">
                         <div class="category">
                             <span>生菓子</span>
                             <span>流し物</span>
@@ -438,7 +437,7 @@
                 <div class="detail-box">
                     <a href="product.html">
                         <span class="detail">商品一覧へ</span>
-                        <img src="imgs/arrow.svg">
+                        <img src="imgs/arrow.svg" alt="">
                     </a>
                 </div>
             </section>
@@ -446,14 +445,14 @@
                 <h2 class="headline">― 店舗情報 ―</h2>
                 <div id="shop-contents">
                     <div id="shop-img">
-                        <img src="imgs/kansaido_interior.png" alt="甘彩堂の内装画像">
+                        <img src="imgs/kansaido_interior.png" alt="甘彩堂の内装">
                     </div>
                     <div id="shop-deco-detail">
-                        <div id="shop-detail">
-                            <span id="title">甘彩堂</span><span>（かんさいどう）</span>
+                        <address id="shop-detail">
+                            <h3 id="title">甘彩堂<span class="shop-detail__reading">（かんさいどう）</span></h3>
                             <p id="time">営業時間：9:30〜18:00<br>定休日：毎週水曜日（祝日の場合は翌日振替）</p>
-                            <p id="address">〒920-0831<br>石川県金沢市東山1丁目12-8<br>電話番号：XXX-XXX-XXXX</p>
-                        </div>
+                            <p id="address">〒920-0831<br>石川県金沢市東山1丁目12-8<br>電話番号：<a href="tel:XXXXXXXXXX">XXX-XXX-XXXX</a></p>
+                        </address>
                         <div id="shop-deco">
                             <img class="none-event right1" src="imgs/shop-wagumo.png" alt="">
                             <img class="none-event left2" src="imgs/shop-wagumo2.png" alt="">
@@ -464,18 +463,21 @@
         </main>
         <footer>
             <div id="imgs-contents">
-                <a href="index.html"><img src="imgs/logo_footer.png" alt="甘彩堂のロゴ"></a>
+                <a href="index.html"><img src="imgs/logo_footer.png" alt="甘彩堂"></a>
                 <div id="icons">
-                    <img src="imgs/icon-line.svg" alt="lineのアイコン">
-                    <img src="imgs/icon-facebook.svg" alt="facebookのアイコン">
-                    <img src="imgs/icon-x.svg" alt="xのアイコン">
-                    <img src="imgs/icon-Instagram.svg" alt="Instagramのアイコン">
+                    <img src="imgs/icon-line.svg" alt="line">
+                    <img src="imgs/icon-facebook.svg" alt="facebook">
+                    <img src="imgs/icon-x.svg" alt="x">
+                    <img src="imgs/icon-Instagram.svg" alt="Instagram">
                 </div>
             </div>
             <div id="footer-shop-info">
-                <p>〒920-0831<br>
-                    石川県金沢市東山1丁目12-8<br>
-                    電話番号：XXX-XXX-XXXX<br>
+                <p>
+                    <address>
+                        〒920-0831<br>
+                        石川県金沢市東山1丁目12-8<br>
+                        電話番号：<a href="tel:XXXXXXXXXX">XXX-XXX-XXXX</a>
+                    </address>
                     営業時間：9:30〜18:00<br>
                     定休日：毎週水曜日（祝日の場合は翌日振替）
                 </p>

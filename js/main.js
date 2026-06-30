@@ -33,14 +33,18 @@ document.addEventListener("DOMContentLoaded", () => {
     const smartphoneNavItems = document.querySelectorAll("#smartphone-nav__items a");
 
     headerHamburger.addEventListener("click", () => {
-        headerSmartphoneNav.classList.toggle("clicked");
-        headerHamburger.classList.toggle("clicked")
+        const isOpen = headerSmartphoneNav.classList.toggle("clicked");
+        headerHamburger.classList.toggle("clicked", isOpen);
+        headerHamburger.setAttribute("aria-expanded", isOpen);
+        headerHamburger.setAttribute("aria-label", isOpen ? "メニューを閉じる" : "メニューを開く");
     });
 
     smartphoneNavItems.forEach(item => {
         item.addEventListener("click", () => {
             headerSmartphoneNav.classList.remove("clicked");
-            headerHamburger.classList.remove("clicked")
+            headerHamburger.classList.remove("clicked");
+            headerHamburger.setAttribute("aria-expanded", "false");
+            headerHamburger.setAttribute("aria-label", "メニューを開く");
         });
     });
 });

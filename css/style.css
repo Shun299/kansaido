@@ -4,6 +4,16 @@
     box-sizing: border-box;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: inherit;
+    font-weight: inherit;
+}
+
 @font-face {
     font-family: 'Higure Gothic R';
     src: url('../fonts/HigureGothic/HigureGothic-Regular.ttf') format('truetype');
@@ -68,6 +78,10 @@ body {
 a {
     text-decoration: none;
     color: inherit;
+}
+
+address {
+    font-style: normal;
 }
 
 .main-text {
@@ -266,6 +280,12 @@ header nav a {
 
 .header__hamburger {
     display: none;
+    appearance: none;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    color: inherit;
+    font: inherit;
 }
 
 .header__smartphone-nav {
@@ -770,6 +790,7 @@ details[open] summary::before {
     grid-template-columns: repeat(3, minmax(min-content, max-content));
     grid-template-rows: auto;
     justify-content: center;
+    gap: 3rem;
 }
 
 #product .detail-box {
@@ -815,6 +836,10 @@ details[open] summary::before {
 
 #shop-detail #title {
     font-size: var(--font-size-2xl);
+}
+
+.shop-detail__reading {
+    font-size: 0.55em;
 }
 
 #shop-detail #time {
